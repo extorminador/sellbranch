@@ -1,5 +1,4 @@
 /* Uncomment and set these variables to customize the grid. */
-
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -8,6 +7,9 @@
 }
 
 .row {
+  max-width: $container-maxwidth;
+  margin-left: auto;
+  margin-right: auto;
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,9 +27,16 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -1rem;
-  margin-left: -1rem;
+  // margin-right: -1rem;
+  // margin-left: -1rem;
 }
+  .row .row {
+    margin-left: -0.625rem;
+    margin-right: -0.625rem; }
+    @media screen and (min-width: 40em) {
+      .row .row {
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem; } }
 
 .row.reverse {
   -webkit-flex-direction: row-reverse;

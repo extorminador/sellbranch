@@ -1,11 +1,19 @@
 // UTILS
-@import 'utils/u-variables'
-@import 'utils/u-helpers'
+@import 'utils/u-variables';
+@import 'utils/u-helpers';
 
-// BASE
-@import 'base/normalize'
-@import 'base/boilerplay'
-@import 'base/typography'
+// // // BASE
+@import 'base/normalize';
+@import 'base/boileplay';
+@import 'base/typography';
 
-// GRIDS
-@import 'layout/foundation'
+// GRIDS -- Foundation + Normalize
+// @import 'layout/foundation';
+
+// GRIDS -- Flexboxgrid
+@import 'layout/flexboxgrid';
+@import 'layout/layout';
+
+// Layout
+@import 'layout/cover';
+

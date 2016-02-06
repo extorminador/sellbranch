@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700);
+
 html {
   font-size: 100%;
 }
@@ -15,7 +17,10 @@ p, blockquote {
 
 h1,
 .t-h1 {
-
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 3.75em;
+  font-weight: 200;
+  color: red;
 }
 
 h2,
