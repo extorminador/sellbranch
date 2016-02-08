@@ -287,7 +287,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48em) {      // 786px
   .container {
     width: 46rem;
   }
@@ -526,7 +526,7 @@
   }
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 62em) {      // 992px
   .container {
     width: 61rem;
   }
@@ -765,7 +765,7 @@
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 75em) {      // 1200px
   .container {
     width: 71rem;
   }

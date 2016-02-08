@@ -1,12 +1,7 @@
-/**
- *  VARIABLES
- *
- *  Configure sierra SCSS library by adjusting this file
- *
- */
+// Variables
 
 // Brand colors
-$brand-primary:         #22b238; // Sellbranch green
+$brand-primary:         #34a839; // Sellbranch green
 $brand-secondary:       #00a6eb; // Sellbranch blue
 $brand-dark:            #2f3d48; // Sellbranch darkgray
 $brand-light:           #9dadba; // Sellbranch lightgray
@@ -46,7 +41,8 @@ $box-shadow:            0 0 5px $shadow-color;
 // $flickr: #fe0883;
 // $foursquare: #8fd400;
 
-// Text colors
+// Text color
+
 $text-color:            $white;       // deprecated. Use $text-body instead.
 $text-body:             $gray;
 $text-gray:             #969da6;
@@ -64,17 +60,38 @@ $text-gray:             #969da6;
 // );
 
 
-/**
- *  LAYOUT
- */
+// Layout
 
-$gutterwidth:               36px;
+// Media queries
+$screen-sm: 48em;
+$screen-md: 62em;
+$screen-lg: 75em;
+
+
+// Container
+
+// $gutterwidth:               36px;
 $container-maxwidth:        73.125em; // 1170px
 $container-medium-maxwidth: 90%;     // 992px
 $container-small-maxwidth:  90%;     // 768px
 $radius:                    3px;
 $border-box:                true;
 
+// Content
+
 $content-maxwidth:          71.25em; // 1140px
 $content-medium-maxwidth:   97.4359%;
 $content-small-maxwidth:   97.4359%;
+
+
+// Typography
+$basefont: 'Titillium Web', sans-serif;
+
+$font-size-base:        1em;      // 16px
+$font-size-base-medium: 1.125em;  // 18px
+$font-size-base-large:  1.125em;  // 18px
+
+$intro-font-base:       1.5em;    // 24px
+
+$transition05:          all 0.3s ease;
+

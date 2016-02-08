@@ -1,5 +1,6 @@
 // UTILS
 @import 'utils/u-variables';
+@import 'utils/u-mixins';
 @import 'utils/u-helpers';
 
 // // // BASE
@@ -15,5 +16,6 @@
 @import 'layout/layout';
 
 // Layout
-@import 'layout/cover';
+@import 'layout/header-cover';
+@import 'layout/about';
 

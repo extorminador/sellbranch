@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Cover styles
+   ========================================================================== */
+
+.cover {
+  min-height: 400px;
+  margin-bottom: 0em;
+  background: url("../img/cover.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  position: relative;
+  transition: $transition05;
+}
+
+  h1{
+    margin-bottom: 0.25em;
+    font-size: 2em;
+    text-align: center;
+    color: $white;
+    padding-top: 55%;
+  }
+
+  .subtitle {
+    font-size: 1em;
+    color: $white;
+    text-align: center;
+  }
+
+@media screen and (min-width: 480px) {
+  .cover {
+    min-height: 50vh;
+  }
+
+    h1 {
+        font-size: 2.5em;
+        padding-top: 30%;
+      }
+
+    .subtitle {
+      font-size: 1.5em;
+    }
+
+}
+
+@media screen and (min-width: $screen-sm) {
+  .cover {
+    min-height: 60vh;
+    margin-bottom: 0em;
+  }
+
+    h1 {
+      font-size: 3.75em;
+      padding-top: 25%;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+  .cover {
+    min-height: 70vh;
+
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .cover {
+  min-height: 80vh;
+  }
+}
+
+.navigation {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+}
+
+
+
+
+
+/* ==========================================================================
+   Header styles
+   ========================================================================== */
+header {
+  width: $container-small-maxwidth;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  & .header__container {
+      display: flex;
+      justify-content: space-between;
+      width: $content-small-maxwidth;
+      height: auto;
+      margin: 0 auto;
+
+      & .logo__container {
+
+        & .logo {
+          margin-top: 1.25em;
+          width: 83px;
+          height: 69px;
+          background: url("../img/sellbranch-logo.png") no-repeat;
+        }
+      }
+
+  & .header__nav {
+    display: none;
+  }
+  }
+}
+
+
+
+
+@media screen and (min-width: $screen-sm) {
+  header {
+    width: $container-medium-maxwidth;
+
+      & .header__container {
+
+        & .logo__container {
+            & .logo {
+
+            }
+        }
+
+        & .header__nav {
+          display: block;
+          width: 80%;
+        }
+
+        nav {
+          width: 100%;
+        }
+
+        ul {
+
+        }
+
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        a {
+          padding-top: 3.5em;
+          padding-bottom: 1em;
+          line-height: 0em;
+          font-weight: 400;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $white;
+          transition: $transition05;
+        }
+
+        a:hover {
+          border-bottom: 1px solid $brand-primary;
+        }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  header {
+    width: $container-maxwidth;
+    margin: 0 auto;
+
+    & .header__container {
+      width: $content-maxwidth;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}

@@ -5,7 +5,8 @@ html {
 }
 
 body {
-  font-size: inherit;
+  font-family: $basefont;
+  // font-size: inherit;
   line-height: 1.5;
 }
 
@@ -17,15 +18,14 @@ p, blockquote {
 
 h1,
 .t-h1 {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 3.75em;
   font-weight: 200;
-  color: red;
+  font-smooth: auto;
 }
 
 h2,
 .t-h2 {
-
+  font-weight: 200;
+  font-smooth: auto;
 }
 
 h3,
@@ -47,3 +47,14 @@ h6,
 .t-h6 {
 
 }
+
+.subtitle {
+  font-weight: 200;
+}
+
+.intro {
+  font-size: $intro-font-base;
+  font-weight: 200;
+}
+
+

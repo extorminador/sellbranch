@@ -1,0 +1,24 @@
+.about {
+  background-color: red;
+  height: 30em;
+  padding-top: 3em;
+  }
+
+.h2__about {
+  font-size: 3em;
+  text-align: center;
+  color: $brand-primary;
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .about {
+    padding-top: 6.25em;
+  }
+
+  .h2__about {
+    font-size: 3.75em;
+  }
+}
+
+
