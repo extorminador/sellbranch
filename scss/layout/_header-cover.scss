@@ -100,26 +100,22 @@ header {
   & .header__container {
       display: flex;
       justify-content: space-between;
-      width: $content-small-maxwidth;
       height: auto;
       margin: 0 auto;
 
       & .logo__container {
+          margin-top: 1.25em;
 
         & .logo {
-          margin-top: 1.25em;
-          width: 83px;
-          height: 69px;
-          background: url("../img/sellbranch-logo.png") no-repeat;
+          margin-top: 0em;
         }
       }
 
-  & .header__nav {
-    display: none;
-  }
+      & .header__nav {
+        display: none;
+      }
   }
 }
-
 
 
 
@@ -128,49 +124,60 @@ header {
     width: $container-medium-maxwidth;
 
       & .header__container {
+        background-color: green;
 
         & .logo__container {
+          background-color: blue;
             & .logo {
-
+              padding-top: 0em;
             }
         }
 
         & .header__nav {
+          background-color: gray;
           display: block;
-          width: 80%;
+          width: 90%;
         }
 
-        nav {
-          width: 100%;
-        }
+          nav {
+            display: block;
+            width: 100%;
+          }
 
-        ul {
+            nav > ul {
+              list-style: none;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: flex-end;
+              padding-left: 0em;
+            }
 
-        }
+              nav > ul > li {
+                background-color: orange;
+              }
 
-        li {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-        }
+                nav > ul > li > a {
+                  background-color: blue;
+                  display: block;
+                  margin-left: 2.5em;
+                  padding-top: 4em;
+                  padding-bottom: 1em;
+                  line-height: 0em;
+                  font-size: 0.875em;
+                  font-weight: 400;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  color: $white;
+                  transition: $transition05;
+                }
 
-        a {
-          padding-top: 3.5em;
-          padding-bottom: 1em;
-          line-height: 0em;
-          font-weight: 400;
-          text-decoration: none;
-          text-transform: uppercase;
-          color: $white;
-          transition: $transition05;
-        }
-
-        a:hover {
-          border-bottom: 1px solid $brand-primary;
-        }
+                nav > ul > li > a:hover {
+                  border-bottom: 1px solid $brand-secondary;
+                }
     }
   }
 }
+
 
 @media screen and (min-width: $screen-lg) {
   header {
@@ -181,6 +188,11 @@ header {
       width: $content-maxwidth;
       height: auto;
       margin: 0 auto;
+
+        nav > ul > li > a {
+          margin-left: 4em;
+          font-size: 1em;
+        }
     }
   }
 }

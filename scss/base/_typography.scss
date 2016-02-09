@@ -14,6 +14,8 @@ h1,h2,h3,h4,h4,h6,
 ul, ol, dl,
 p, blockquote {
   margin-top: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 h1,
@@ -24,9 +26,11 @@ h1,
 
 h2,
 .t-h2 {
+  font-size: 3em;
   font-weight: 200;
   font-smooth: auto;
 }
+
 
 h3,
 .t-h3 {
@@ -49,12 +53,28 @@ h6,
 }
 
 .subtitle {
+  font-size: 1.125em;
   font-weight: 200;
 }
 
 .intro {
-  font-size: $intro-font-base;
-  font-weight: 200;
+  font-size: 1.125em;
+  font-weight: 300;
+}
+
+
+@media screen and (min-width: $screen-sm) {
+
+  h2,
+  .t-h2 {
+    font-size: 3.75em;
+  }
+
+  .intro {
+  font-size: 1.5em;
+  line-height: 36px;
+  }
+
 }
 
 

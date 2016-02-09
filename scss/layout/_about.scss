@@ -1,14 +1,53 @@
 .about {
-  background-color: red;
-  height: 30em;
   padding-top: 3em;
   }
 
+.row__about {
+  margin-bottom: 3em;
+}
+
 .h2__about {
-  font-size: 3em;
   text-align: center;
   color: $brand-primary;
 }
+
+.intro__about {
+    text-align: center;
+    white-space: pre-line;
+}
+
+.timeline__section {
+  min-height: 545px;
+  background-color: red;
+  background: url("../img/timeline.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  position: relative;
+}
+
+.timeline {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.timeline__year {
+  padding-left: 3em;
+}
+
+.timeline__year-one {
+  margin-top: 20em;
+}
+
+.timeline__year-two {
+  margin-top: 18em;
+}
+
 
 @media screen and (min-width: $screen-sm) {
 
@@ -17,7 +56,10 @@
   }
 
   .h2__about {
-    font-size: 3.75em;
+
+  }
+
+  .intro{
   }
 }
 

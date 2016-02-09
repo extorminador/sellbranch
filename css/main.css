@@ -648,6 +648,8 @@ h1, h2, h3, h4, h4, h6,
 ul, ol, dl,
 p, blockquote {
   margin-top: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 h1,
@@ -658,19 +660,32 @@ h1,
 
 h2,
 .t-h2 {
+  font-size: 3em;
   font-weight: 200;
   font-smooth: auto;
 }
 
 .subtitle {
+  font-size: 1.125em;
   font-weight: 200;
 }
 
 .intro {
-  font-size: 1.5em;
-  font-weight: 200;
+  font-size: 1.125em;
+  font-weight: 300;
 }
 
+@media screen and (min-width: 48em) {
+  h2,
+  .t-h2 {
+    font-size: 3.75em;
+  }
+
+  .intro {
+    font-size: 1.5em;
+    line-height: 36px;
+  }
+}
 /* Uncomment and set these variables to customize the grid. */
 .container-fluid {
   margin-right: auto;
@@ -680,7 +695,8 @@ h2,
 }
 
 .row {
-  max-width: 73.125em;
+  box-sizing: border-box;
+  max-width: 71.125em;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -747,8 +763,8 @@ h2,
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .col-xs {
@@ -985,8 +1001,8 @@ h2,
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .col-sm {
@@ -1223,8 +1239,8 @@ h2,
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .col-md {
@@ -1461,8 +1477,8 @@ h2,
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .col-lg {
@@ -1680,6 +1696,10 @@ section {
   width: 100%;
 }
 
+a.current {
+  border-bottom: 1px solid #34a839;
+}
+
 /* ==========================================================================
    Cover styles
    ========================================================================== */
@@ -1778,15 +1798,14 @@ header .header__container {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 97.4359%;
   height: auto;
   margin: 0 auto;
 }
-header .header__container .logo__container .logo {
+header .header__container .logo__container {
   margin-top: 1.25em;
-  width: 83px;
-  height: 69px;
-  background: url("../img/sellbranch-logo.png") no-repeat;
+}
+header .header__container .logo__container .logo {
+  margin-top: 0em;
 }
 header .header__container .header__nav {
   display: none;
@@ -1796,28 +1815,50 @@ header .header__container .header__nav {
   header {
     width: 90%;
   }
+  header .header__container {
+    background-color: green;
+  }
+  header .header__container .logo__container {
+    background-color: blue;
+  }
+  header .header__container .logo__container .logo {
+    padding-top: 0em;
+  }
   header .header__container .header__nav {
+    background-color: gray;
     display: block;
-    width: 80%;
+    width: 90%;
   }
   header .header__container nav {
+    display: block;
     width: 100%;
   }
-  header .header__container li {
-    width: 100%;
+  header .header__container nav > ul {
+    list-style: none;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-left: 0em;
   }
-  header .header__container a {
-    padding-top: 3.5em;
+  header .header__container nav > ul > li {
+    background-color: orange;
+  }
+  header .header__container nav > ul > li > a {
+    background-color: blue;
+    display: block;
+    margin-left: 2.5em;
+    padding-top: 4em;
     padding-bottom: 1em;
     line-height: 0em;
+    font-size: 0.875em;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
@@ -1825,8 +1866,8 @@ header .header__container .header__nav {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-  header .header__container a:hover {
-    border-bottom: 1px solid #34a839;
+  header .header__container nav > ul > li > a:hover {
+    border-bottom: 1px solid #00a6eb;
   }
 }
 @media screen and (min-width: 75em) {
@@ -1835,29 +1876,69 @@ header .header__container .header__nav {
     margin: 0 auto;
   }
   header .header__container {
-    width: 71.25em;
+    width: 71.125em;
     height: auto;
     margin: 0 auto;
   }
+  header .header__container nav > ul > li > a {
+    margin-left: 4em;
+    font-size: 1em;
+  }
 }
 .about {
-  background-color: red;
-  height: 30em;
   padding-top: 3em;
 }
 
+.row__about {
+  margin-bottom: 3em;
+}
+
 .h2__about {
-  font-size: 3em;
   text-align: center;
   color: #34a839;
+}
+
+.intro__about {
+  text-align: center;
+  white-space: pre-line;
+}
+
+.timeline__section {
+  min-height: 545px;
+  background-color: red;
+  background: url("../img/timeline.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  position: relative;
+}
+
+.timeline {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.timeline__year {
+  padding-left: 3em;
+}
+
+.timeline__year-one {
+  margin-top: 20em;
+}
+
+.timeline__year-two {
+  margin-top: 18em;
 }
 
 @media screen and (min-width: 48em) {
   .about {
     padding-top: 6.25em;
   }
-
-  .h2__about {
-    font-size: 3.75em;
-  }
 }
+
+/*# sourceMappingURL=main.css.map */
