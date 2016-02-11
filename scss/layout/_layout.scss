@@ -1,5 +1,33 @@
+.img {
+  width: $imagen;
+}
+
 section {
   width: 100%;
 }
 
+.row_brand {
+  max-width: $content-small-maxwidth;
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .row_brand {
+    max-width: $content-small-maxwidth;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+
+  .row_brand {
+    max-width: $content-medium-maxwidth;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .row_brand {
+    max-width: $content-maxwidth;
+  }
+}
 

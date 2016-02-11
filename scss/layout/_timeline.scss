@@ -1,0 +1,201 @@
+.date {
+  font-size: $font-size-base;
+  color: $brand-dark;
+  text-align: center;
+}
+
+.circle {
+  margin: 0 auto;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  width: 1.3em;
+  height: 1.3em;
+  background-color: $white;
+  border-radius: 6vw;
+  border: 3px solid $brand-primary;
+  overflow: hidden;
+}
+
+.timeline__section {
+  margin-top: -15em;
+  min-height: 545px;
+  background: url("../img/timeline.svg") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: -50%;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  position: relative;
+}
+
+.timeline {
+  margin-bottom: 2em;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+}
+
+.timeline:first-child {
+  margin-top: 13.5em;
+}
+
+.timeline__year {
+  padding-left: 0em;
+  padding-right: 0em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media screen and (min-width: $screen-sm) {
+
+  .timeline__section {
+    margin-top: 0em;
+    min-height: 545px;
+    background: url("../img/timeline-sm.svg") no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    position: relative;
+  }
+
+  .date {
+    font-size: $font-size-base-medium;
+  }
+
+  .circle {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: $white;
+    border-radius: 6vw;
+    border: 3px solid $brand-primary;
+    overflow: hidden;
+  }
+
+  .timeline:first-child {
+    margin-top: 12em;
+    margin-left: 2%;
+  }
+
+  .timeline:nth-child(2) {
+    margin-top: 9em;
+  }
+
+  .timeline:nth-child(3) {
+    margin-top: 7.25em;
+  }
+
+  .timeline:nth-child(4) {
+    margin-top: 5.75em;
+  }
+
+  .timeline:nth-child(5) {
+    margin-top: 4.5em;
+  }
+
+  .timeline:not(:first-child) {
+    margin-left: 3%;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: $screen-md) {
+
+  .row__timeline{
+    background-color: rgba(200, 200, 0, 0.5);
+  }
+
+  .timeline__section {
+    min-height: 545px;
+    background: url("../img/timeline.svg") no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    position: relative;
+  }
+
+  .timeline:first-child {
+    margin-top: 12.5em;
+    margin-left: 2%;
+  }
+
+  .timeline:nth-child(2) {
+    margin-top: 8.25em;
+  }
+
+  .timeline:nth-child(3) {
+    margin-top: 5.5em;
+  }
+
+  .timeline:nth-child(4) {
+    margin-top: 3.25em;
+  }
+
+  .timeline:nth-child(5) {
+    margin-top: 1.5em;
+  }
+
+  .timeline:not(:first-child) {
+    margin-left: 3.5%;
+  }
+
+}
+
+
+
+
+
+@media screen and (min-width: $screen-lg) {
+
+  .row__timeline{
+    background-color: rgba(200, 200, 0, 0.1);
+  }
+
+  .timeline {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .timeline:first-child {
+    margin-left: 8.333%;
+  }
+
+  .timeline:first-child {
+    margin-top: 12.75em;
+  }
+
+  .timeline:nth-child(5) {
+    margin-top: 1.75em;
+  }
+
+  .timeline:not(:first-child) {
+    margin-left: 0%;
+  }
+
+
+}
+
+
