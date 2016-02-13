@@ -5,5 +5,7 @@
 }
 
 a.current {
-  border-bottom: 1px solid $brand-primary;
+  font-weight: 700;
+  color: $brand-light;
+  border-bottom: 1px solid $brand-light;
 }

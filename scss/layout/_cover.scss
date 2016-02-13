@@ -29,11 +29,10 @@
       font-size: 2em;
       text-align: center;
       color: $white;
-      padding-top: 55%;
+      padding-top: 60%;
     }
 
     .subtitle {
-      font-size: 1em;
       color: $white;
       text-align: center;
     }
@@ -45,7 +44,8 @@
 
     h1 {
         font-size: 2.5em;
-        padding-top: 30%;
+        line-height: 1em;
+        padding-top: 5.5em;
       }
 
     .subtitle {
@@ -53,6 +53,8 @@
     }
 
 }
+
+
 
 @media screen and (min-width: $screen-sm) {
   .cover {
@@ -62,29 +64,28 @@
 
     h1 {
       font-size: 3.75em;
-      padding-top: 25%;
+      padding-top: 4em;
     }
 }
 
+
+
 @media screen and (min-width: $screen-md) {
+
   .cover {
     min-height: 70vh;
-
   }
+
+    h1 {
+        padding-top: 5em;
+    }
 }
+
+
 
 @media screen and (min-width: $screen-lg) {
   .cover {
   min-height: 80vh;
   }
-}
 
-.navigation {
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  position: fixed;
-  margin: 0 auto;
-  width: 100%;
-  height: 100px;
-  z-index: 999;
 }

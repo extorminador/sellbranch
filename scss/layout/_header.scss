@@ -1,108 +1,150 @@
+
+/* ==========================================================================
+   Navigation and fixed header
+   ========================================================================== */
+.navigation {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 999;
+}
+
+.fixed {
+    position: fixed;
+    background-color: rgba(35, 39, 49, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+
 /* ==========================================================================
    Header styles
    ========================================================================== */
+
+
 header {
   width: $container-small-maxwidth;
   margin: 0 auto;
-  padding-bottom: 1em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
 
-  & .header__container {
+  .header__container {
       display: flex;
       justify-content: space-between;
       height: auto;
       margin: 0 auto;
+  }
 
-      & .logo__container {
-          margin-top: 1.25em;
+    .logo__container {
+          margin-top: 0em;
+    }
 
-        & .logo {
+      .logo {
           margin-top: 0em;
         }
-      }
 
-      & .header__nav {
-        display: none;
-      }
+  .header__nav__container {
+    display: none;
   }
-}
+
+
+
 
 
 
 @media screen and (min-width: $screen-sm) {
+
   header {
     width: $container-medium-maxwidth;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 0;
+  }
 
-      & .header__container {
-        background-color: green;
+    .header__container {
+        // background-color: green;
+    }
 
-        & .logo__container {
-          background-color: blue;
-            & .logo {
-              padding-top: 0em;
-            }
+      .logo__container {
+        // background-color: blue;
+      }
+
+        .logo {
+          padding-top: 0em;
         }
 
-        & .header__nav {
-          background-color: gray;
-          display: block;
-          width: 90%;
+    .header__nav__container {
+      display: block;
+      width: 90%;
+    }
+
+      nav {
+        display: block;
+        width: 100%;
+      }
+
+        nav > ul {
+          list-style: none;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+          padding-left: 0em;
         }
 
-          nav {
-            display: block;
-            width: 100%;
+          nav > ul > li {
+            // background-color: orange;
           }
 
-            nav > ul {
-              list-style: none;
-              display: flex;
-              flex-flow: row wrap;
-              justify-content: flex-end;
-              padding-left: 0em;
+            nav > ul > li > a {
+              // background-color: blue;
+              display: block;
+              margin-left: 2.5em;
+              padding-top: 2.25em;
+              padding-bottom: 1em;
+              line-height: 0em;
+              font-size: 0.875em;
+              font-weight: 600;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: $white;
+              transition: $transition05;
             }
 
-              nav > ul > li {
-                background-color: orange;
-              }
+            nav > ul > li > a:hover {
+              font-weight: 600;
+              border-bottom: 1px solid $brand-light;
+              color: $brand-light;
+            }
 
-                nav > ul > li > a {
-                  background-color: blue;
-                  display: block;
-                  margin-left: 2.5em;
-                  padding-top: 4em;
-                  padding-bottom: 1em;
-                  line-height: 0em;
-                  font-size: 0.875em;
-                  font-weight: 400;
-                  text-decoration: none;
-                  text-transform: uppercase;
-                  color: $white;
-                  transition: $transition05;
-                }
+            nav > ul > li > a.current {
+              font-weight: 600;
+              border-bottom: 1px solid $brand-light;
+            }
 
-                nav > ul > li > a:hover {
-                  border-bottom: 1px solid $brand-secondary;
-                }
-      }
-  }
 }
 
 
 @media screen and (min-width: $screen-lg) {
+
   header {
     width: $container-maxwidth;
     margin: 0 auto;
+  }
 
-    & .header__container {
+    .header__container {
       width: $content-maxwidth;
       height: auto;
       margin: 0 auto;
+    }
 
         nav > ul > li > a {
           margin-left: 4em;
           font-size: 1em;
         }
-    }
-  }
+
 }

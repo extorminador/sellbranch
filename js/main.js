@@ -1,6 +1,6 @@
 $(function(){
         $('a.smoothScroll').smoothScroll({
-          offset: -40,
+          offset: -50,
       scrollTarget: $(this).val()
      });
 
@@ -36,3 +36,29 @@ $(function(){
             stickyNav();
         });
     });
+
+
+  /***************** Header BG Scroll ******************/
+
+  $(function() {
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 20) {
+        $('section.navigation').addClass('fixed');
+        $('header').css({
+          "border-bottom": "none",
+          "padding": "15px 0 10px 0"
+        });
+      } else {
+        $('section.navigation').removeClass('fixed');
+        $('section.navigation').css({
+          "border-bottom": "none"
+        });
+        $('header').css({
+          "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
+          "padding": "30px 0"
+        });
+      }
+    });
+  });
