@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Programmatic
+   ========================================================================== */
+
+// * Made with my own Flexbox or not with Flexboxgrid system
+
+.programmatic__section {
+  padding-top: 4em;
+  padding-bottom: 6em;
+}
+
+  .programmatic__row {
+    padding-bottom: 3em;
+  }
+
+    .flex-item--programmatic {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .flex-item--imagen {
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+
+
+@media screen and (min-width: $screen-sm) {
+
+    .flex-item--programmatic {
+        padding-left: 2em;
+        padding-right: 2em;
+        // background-color: blue;
+    }
+
+      .vertical_line {
+        border-right: 1px solid black;
+      }
+
+    .flex-item--imagen {
+      padding-top: 1em;
+      padding-left: 0.5em;
+      padding-right: 1em;
+    }
+
+
+}
+
+
+@media screen and (min-width: $screen-md) {
+
+  .programmatic__section {
+    // padding-top: 6em;
+  }
+
+    .flex-item--programmatic {
+      padding-left: 3em;
+      padding-right: 2em;
+      // background-color: red;
+    }
+
+    .flex-item--imagen {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+
+
+}
+
+
+
+@media screen and (min-width: $screen-lg) {
+
+  .flex-item--programmatic {
+    padding-left: 3em;
+    padding-right: 3em;
+    // background-color: salmon;
+  }
+
+  .flex-item--imagen {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+}

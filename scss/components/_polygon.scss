@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Polygon
+   ========================================================================== */
+
+.polygon__light-brand-primary {
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: lighten($brand-primary, 35%);
+  margin-top: -7em;
+  height: 2em;
+}
+
+.polygon__brand-dark {
+  clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0% 100%);
+  background-color: $brand-dark;
+  margin-top: -7em;
+  height: 2em;
+}

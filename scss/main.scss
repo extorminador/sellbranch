@@ -22,7 +22,11 @@
 @import 'layout/about';
 @import 'layout/timeline';
 @import 'layout/ceo';
-
+@import 'layout/founder';
+@import 'layout/programmatic';
 
 @import 'layout/twitter';
 
+// Components
+@import 'components/polygon';
+@import 'components/round-image';

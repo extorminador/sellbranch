@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Founder
+   ========================================================================== */
+
+.founder__section {
+  margin-top: -10em;
+}
+
+  .founder__section-content {
+    background-color: $brand-dark;
+    width: 100%;
+    margin-top: -1px;
+    padding-bottom: 6em;
+  }
+
+
+@media screen and (min-width: $screen-sm) {
+
+  .founder__section {
+    width: 100%;
+    margin-top: -9em;
+    margin-bottom: 0em;
+  }
+    .founder__section-polygon {
+      margin-top: -9em;
+      height: 5em;
+    }
+
+}

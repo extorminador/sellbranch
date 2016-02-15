@@ -3,14 +3,14 @@
    ========================================================================== */
 .timeline__section {
   min-height: 545px;
-  background: url("../img/timeline.svg") no-repeat;
+  background: url("../img/timeline-sx.svg") no-repeat;
   background-size: cover;
-  background-position: 80% 110%;
+  background-position: 100% 0%;
 }
 
   .timeline__col{
     margin-bottom: 2em;
-    background-color: rgba(55, 0, 0, 0.1);
+    // background-color: rgba(55, 0, 0, 0.1);
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
@@ -34,6 +34,8 @@
     .timeline__year-text {
       padding-left: 0em;
       padding-right: 0em;
+      font-size: 1em;
+      line-height: 1.5em;
       text-align: left;
       // background-color: rgba(0, 0, 0, 0.1);
     }
@@ -43,28 +45,30 @@
 @media screen and (min-width: $screen-sm) {
 
   .timeline__section {
+    background: url("../img/timeline.svg") no-repeat;
+    background-size: cover;
     background-position: 50% 50%;
   }
 
   .timeline__col:first-child {
-    margin-top: 11.25em;
+    margin-top: 10.25em;
     margin-left: 2%;
   }
 
   .timeline__col:nth-child(2) {
-    margin-top: 8.25em;
+    margin-top: 7em;
   }
 
   .timeline__col:nth-child(3) {
-    margin-top: 6.25em;
+    margin-top: 5em;
   }
 
   .timeline__col:nth-child(4) {
-    margin-top: 4.5em;
+    margin-top: 3.5em;
   }
 
   .timeline__col:nth-child(5) {
-    margin-top: 3em;
+    margin-top: 2em;
   }
 
   .timeline__col:not(:first-child) {
@@ -98,31 +102,31 @@
 @media screen and (min-width: $screen-md) {
 
   .row__timeline{
-    // background-color: rgba(200, 200, 0, 0.5);
+    // background-color: rgba(22, 200, 0, 0.5);
   }
 
     .timeline__col:first-child {
-      margin-top: 13.1em;
+      margin-top: 12em;
       margin-left: 2%;
     }
 
     .timeline__col:nth-child(2) {
-      margin-top: 9.25em;
+      margin-top: 7.75em;
     }
 
     .timeline__col:nth-child(3) {
-      margin-top: 6.25em;
+      margin-top: 5em;
     }
 
     .timeline__col:nth-child(4) {
-      margin-top: 3.75em;
+      margin-top: 2.75em;
     }
 
-    .timeline:nth-child(5) {
-      margin-top: 2em;
+    .timeline__col:nth-child(5) {
+      margin-top: 1em;
     }
 
-    .timeline:not(:first-child) {
+    .timeline__col:not(:first-child) {
       margin-left: 3.5%;
     }
 
@@ -146,15 +150,19 @@
     }
 
     .timeline__col:first-child {
-      margin-top: 13em;
+      margin-top: 11.75em;
     }
 
     .timeline__col:nth-child(2) {
-      margin-top: 9.25em;
+      margin-top: 8em;
+    }
+
+    .timeline__col:nth-child(3) {
+      margin-top: 5em;
     }
 
     .timeline__col:nth-child(5) {
-      margin-top: 2em;
+      margin-top: 0.75em;
     }
 
     .timeline__col:not(:first-child) {

@@ -44,7 +44,7 @@ $(function(){
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
-      if (scroll >= 20) {
+      if (scroll >= 50) {
         $('section.navigation').addClass('fixed');
         $('header').css({
           "border-bottom": "none",

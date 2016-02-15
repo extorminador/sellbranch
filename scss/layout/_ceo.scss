@@ -3,42 +3,21 @@
    ========================================================================== */
 
 .ceo__section {
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
+  margin-top: 8em;
 }
-  .ceo__section-polygon {
-    background-color: lighten($brand-primary, 35%);
-    margin-top: -0em;
-    height: 2em;
-    width: 100%;
-    clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
-  }
 
   .ceo__section-content {
     background-color: lighten($brand-primary, 35%);
     width: 100%;
     margin-top: -1px;
+    padding-bottom: 13em;
   }
 
-    .h3__ceo {
-      padding-top: 3em;
-      padding-bottom: 0.5em;
-      text-align: center;
-    }
-
-    .intro__ceo {
-      width: 80%;
-      margin: 0 auto;
-      text-align: center;
-      padding-bottom: 1em;
-    }
-
-
-
 @media screen and (min-width: $screen-sm) {
-  .ceo__section-polygon {
-    margin-top: -5em;
-    height: 5em;
+
+  .ceo__section {
+    width: 100%;
+    margin-top: 0em;
   }
 
 }

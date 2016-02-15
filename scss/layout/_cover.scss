@@ -4,7 +4,6 @@
 
 .cover {
   min-height: 400px;
-  background-color: red;
   margin-bottom: 0em;
   position: relative;
   transition: $transition05;
@@ -12,7 +11,7 @@
 
   .cover__image {
     min-width: 100%;
-    background: url("../img/cover.jpg") no-repeat;
+    background: url("../img/cover-sx.jpg") no-repeat;
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -37,19 +36,24 @@
       text-align: center;
     }
 
+
+
+
 @media screen and (min-width: 480px) {
+
   .cover {
-    min-height: 50vh;
+    min-height: 50%;
   }
 
     h1 {
-        font-size: 2.5em;
-        line-height: 1em;
-        padding-top: 5.5em;
-      }
+      font-size: 2.5em;
+      line-height: 1em;
+      padding-top: 5.5em;
+    }
 
     .subtitle {
       font-size: 1.5em;
+      padding-bottom: 3em;
     }
 
 }
@@ -57,14 +61,28 @@
 
 
 @media screen and (min-width: $screen-sm) {
+
   .cover {
-    min-height: 60vh;
+    min-height: 50%;
     margin-bottom: 0em;
   }
 
+    .cover__image {
+      background: url("../img/cover.jpg") no-repeat;
+      background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-repeat-x: initial;
+      background-repeat-y: initial;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;
+      background-color: initial;
+    }
+
     h1 {
       font-size: 3.75em;
-      padding-top: 4em;
+      padding-top: 30%;
     }
 }
 
@@ -72,20 +90,25 @@
 
 @media screen and (min-width: $screen-md) {
 
-  .cover {
-    min-height: 70vh;
-  }
 
-    h1 {
-        padding-top: 5em;
-    }
+  .cover {
+    min-height: 60vh;
+  }
+      h1 {
+        padding-top: 25vh;
+      }
 }
 
 
 
 @media screen and (min-width: $screen-lg) {
+
   .cover {
-  min-height: 80vh;
+    min-height: 80vh;
   }
+
+    h1 {
+      padding-top: 35vh;
+    }
 
 }

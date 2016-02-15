@@ -18,6 +18,7 @@ p, blockquote {
   margin-top: 0;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
+
 }
 
 h1,
@@ -36,8 +37,11 @@ h2,
 
 h3,
 .t-h3 {
-  font-size: 1.5em;     // 24px
+  font-size: 1.375em;     // 22px
   font-weight: 300;
+  padding-top: 4em;
+  padding-bottom: 0.75em;
+  text-align: center;
 }
 
 h4,
@@ -61,12 +65,33 @@ h6,
 }
 
 .intro {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1em;
   font-size: 1.125em;     // 18px
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
   font-weight: 400;
+  text-align: left;
+  margin-top: 1em;
+}
+
+.no-top{
+  margin-top: 0em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $brand-primary;
+}
+
+.text-light-gray {
+  color: $text-light-gray;
 }
 
 
@@ -77,10 +102,27 @@ p {
     font-size: 3.75em;    // 60px
   }
 
+  h3,
+  .t-h3 {
+    font-size: 1.5em;     // 24px
+    font-weight: 300;
+  }
+
   .intro {
   font-size: 1.5em;       // 24px
   line-height: 36px;
+  font-weight: 300;
   text-align: center;
+  }
+
+}
+
+
+@media screen and (min-width: $screen-md) {
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.875rem;
   }
 
 }

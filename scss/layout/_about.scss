@@ -1,44 +1,30 @@
-.about {
+.about__section {
   padding-top: 3em;
-  }
-
-.row__about {
-  margin-bottom: 3em;
 }
 
-.h2__about {
-  text-align: center;
-  color: $brand-primary;
-}
+// .row__about {
+//   margin-bottom: 3em;
+// }
 
 .intro__about {
     text-align: center;
-    white-space: pre-line;
+    white-space: normal;
 }
-
-
-
-@media screen and (min-width: $screen-sm) {
-
-}
-
 
 
 
 @media screen and (min-width: $screen-md) {
 
-  .about {
+  .about__section {
     padding-top: 6.25em;
+  }
+
+  .intro__about {
+    text-align: center;
+    white-space: pre-line;
   }
 
 }
 
-
-
-
-
-@media screen and (min-width: $screen-lg) {
-
-}
 
 

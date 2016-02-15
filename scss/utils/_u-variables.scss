@@ -45,7 +45,7 @@ $box-shadow:            0 0 5px $shadow-color;
 
 $text-color:            $white;       // deprecated. Use $text-body instead.
 $text-body:             $gray;
-$text-gray:             #969da6;
+$text-light-gray:             lighten($brand-dark, 45%);
 
 // $text-color-map: (
 //   primary:              $brand-primary,
@@ -81,7 +81,7 @@ $border-box:                true;
 
 $content-maxwidth:          71.125em;      // 1138px
 $content-medium-maxwidth:   90%;
-$content-small-maxwidth:   90%;
+$content-small-maxwidth:    90%;
 
 
 // Typography
