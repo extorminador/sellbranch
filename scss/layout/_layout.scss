@@ -50,14 +50,13 @@ section {
   width: 90%;
   margin: 0 auto;
   display: block;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
     .flex-item {
         width: 100%;
-        margin:0;
-        // background-color: green;
+        margin:0 auto;
     }
 
 .space-between {

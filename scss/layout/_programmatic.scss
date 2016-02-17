@@ -13,16 +13,28 @@
     padding-bottom: 3em;
   }
 
+  .flex-item{
+    // padding: 0;
+    // margin: 0;
+  }
+
     .flex-item--programmatic {
-        padding-left: 0em;
-        padding-right: 0em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
     }
 
-    .flex-item--imagen {
-      width: 100%;
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
+      .flex-container--imagen {
+        display: block;
+        width: calc(100% - 1em);
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+
+      .flex-item--imagen {
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
 
 
 
@@ -31,18 +43,23 @@
     .flex-item--programmatic {
         padding-left: 2em;
         padding-right: 2em;
-        // background-color: blue;
     }
 
       .vertical_line {
         border-right: 1px solid black;
       }
 
-    .flex-item--imagen {
-      padding-top: 1em;
-      padding-left: 0.5em;
-      padding-right: 1em;
+    .flex-container--imagen {
+      display: flex;
+      width: calc(100% - 3em);
+      padding-left: 2em;
+      padding-right: 0em;
     }
+
+      .flex-item--imagen {
+        padding-right: 1em;
+        margin-bottom: 0em;
+      }
 
 
 }
@@ -55,16 +72,14 @@
   }
 
     .flex-item--programmatic {
-      padding-left: 3em;
+      padding-left: 2em;
       padding-right: 2em;
-      // background-color: red;
     }
 
-    .flex-item--imagen {
-      padding-top: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
+      .flex-item--imagen {
+        padding-left: 0em;
+        padding-right: 1em;
+      }
 
 
 
@@ -75,15 +90,20 @@
 @media screen and (min-width: $screen-lg) {
 
   .flex-item--programmatic {
-    padding-left: 3em;
-    padding-right: 3em;
-    // background-color: salmon;
+    padding-left: 4em;
+    padding-right: 4em;
   }
 
-  .flex-item--imagen {
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+      .flex-item--imagen {
+        padding-left: 2em;
+        padding-right: 3em;
+      }
+
+      .flex-item--imagen:first-child {
+        padding-left: 2em;
+        padding-right: 0em;
+      }
+
+
 
 }

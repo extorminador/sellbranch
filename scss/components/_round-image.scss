@@ -9,26 +9,47 @@
   width: 9em;
   height: 9em;
   border-radius: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   overflow: hidden;
 }
 
-  .round__image--border-brand-primary {
-    border: 6px solid $brand-primary;
-    background-color: $brand-primary;
-    margin-top: -6em;
-    margin-bottom: 1em;
-  }
+  // Round image for CEO and Founder
 
   .round__image--border-light-brand-primary {
     border: 6px solid lighten($brand-primary, 35%);
     background-color: lighten($brand-primary, 35%);
-    margin-top: -6em;
     margin-bottom: 1em;
   }
 
   .round__image--border-brand-dark {
     border: 6px solid $brand-dark;
     background-color: $brand-dark;
-    margin-top: -6em;
+    margin-bottom: 1em;
+  }
+
+    .round__image--margin {
+      margin-top: -6em;
+    }
+
+
+  // Direct Sales
+
+  .round__image--border-brand-primary {
+    border: 6px solid $brand-primary;
+    background-color: $color-success;
+    margin-bottom: 1em;
+  }
+
+
+  .round__image--border-warning {
+    border: 6px solid $color-warning;
+    background-color: #f7d752;
+    margin-bottom: 1em;
+  }
+
+  .round__image--border-error {
+    border: 6px solid $color-error;
+    background-color: #f27755;
     margin-bottom: 1em;
   }

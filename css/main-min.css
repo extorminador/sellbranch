@@ -66,6 +66,51 @@
 .clearfix:after {
   clear: both; }
 
+/* ==========================================================================
+   Padding classes
+   ========================================================================== */
+/*
+ Padding Top
+*/
+.padding-top-0 {
+  padding-top: 0em; }
+
+.padding-top-1 {
+  padding-top: 1em; }
+
+.padding-top-2 {
+  padding-top: 2em; }
+
+.padding-top-3 {
+  padding-top: 3em; }
+
+.padding-top-4 {
+  padding-top: 4em; }
+
+.padding-top-5 {
+  padding-top: 5em; }
+
+  /*
+ Padding Bottom
+*/
+.padding-bottom-0 {
+  padding-bottom: 0em; }
+
+.padding-bottom-1 {
+  padding-bottom: 1em; }
+
+.padding-bottom-2 {
+  padding-bottom: 2em; }
+
+.padding-bottom-3 {
+  padding-bottom: 3em; }
+
+.padding-bottom-4 {
+  padding-bottom: 4em; }
+
+.padding-bottom-5 {
+  padding-bottom: 5em; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -601,8 +646,6 @@ h3,
 .t-h3 {
   font-size: 1.375em;
   font-weight: 300;
-  padding-top: 4em;
-  padding-bottom: 0.75em;
   text-align: center; }
 
 .subtitle {
@@ -616,6 +659,10 @@ h3,
   font-size: 1.125em;
   font-weight: 400; }
 
+.h3-padding {
+  padding-top: 4em;
+  padding-bottom: 0.75em; }
+
 p {
   font-weight: 400;
   text-align: left;
@@ -624,16 +671,40 @@ p {
 .no-top {
   margin-top: 0em; }
 
+.pre-line {
+  white-space: normal; }
+
 .text-center {
   text-align: center; }
+
+.text-justify {
+  text-align: left; }
 
 .text-primary {
   color: #22b238; }
 
+.tex-secondary {
+  color: #00a6eb; }
+
+.text-dark {
+  color: #2f3d48; }
+
 .text-light-gray {
   color: #9db0bf; }
 
+.text-success {
+  color: #53f476; }
+
+.text-warning {
+  color: #c6ac42; }
+
+.text-error {
+  color: #c25f44; }
+
 @media screen and (min-width: 48em) {
+  .text-justify {
+    text-align: justify; }
+
   h2,
   .t-h2 {
     font-size: 3.75em; }
@@ -641,7 +712,7 @@ p {
   h3,
   .t-h3 {
     font-size: 1.5em;
-    font-weight: 300; }
+    font-weight: 400; }
 
   .intro {
     font-size: 1.5em;
@@ -651,7 +722,10 @@ p {
 @media screen and (min-width: 62em) {
   p {
     font-size: 1.125em;
-    line-height: 1.875rem; } }
+    line-height: 1.875rem; }
+
+  .pre-line {
+    white-space: pre-line; } }
 /* Uncomment and set these variables to customize the grid. */
 .container-fluid,
 .container {
@@ -1509,6 +1583,9 @@ p {
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
     order: 1; } }
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 .img {
   width: 100%; }
 
@@ -1535,12 +1612,12 @@ section {
   width: 90%;
   margin: 0 auto;
   display: block;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
+  padding-bottom: 0;
+  padding-top: 0; }
 
 .flex-item {
   width: 100%;
-  margin: 0; }
+  margin: 0 auto; }
 
 .space-between {
   -webkit-box-pack: justify;
@@ -1770,17 +1847,9 @@ a.current {
 .about__section {
   padding-top: 3em; }
 
-.intro__about {
-  text-align: center;
-  white-space: normal; }
-
 @media screen and (min-width: 62em) {
   .about__section {
-    padding-top: 6.25em; }
-
-  .intro__about {
-    text-align: center;
-    white-space: pre-line; } }
+    padding-top: 6.25em; } }
 /* ==========================================================================
    Timeline
    ========================================================================== */
@@ -1803,7 +1872,7 @@ a.current {
   font-weight: 600;
   color: #2f3d48;
   text-align: left;
-  padding-bottom: 1em; }
+  padding-bottom: 0em; }
 
 .timeline__year-circle {
   display: none; }
@@ -1934,6 +2003,9 @@ a.current {
   .founder__section-polygon {
     margin-top: -9em;
     height: 5em; } }
+/* ==========================================================================
+   Programmatic
+   ========================================================================== */
 .programmatic__section {
   padding-top: 4em;
   padding-bottom: 6em; }
@@ -1942,8 +2014,14 @@ a.current {
   padding-bottom: 3em; }
 
 .flex-item--programmatic {
-  padding-left: 0em;
-  padding-right: 0em; }
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
+
+.flex-container--imagen {
+  display: block;
+  width: calc(100% - 1em);
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
 
 .flex-item--imagen {
   width: 100%;
@@ -1958,28 +2036,43 @@ a.current {
   .vertical_line {
     border-right: 1px solid black; }
 
+  .flex-container--imagen {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 3em);
+    padding-left: 2em;
+    padding-right: 0em; }
+
   .flex-item--imagen {
-    padding-top: 1em;
-    padding-left: 0.5em;
-    padding-right: 1em; } }
+    padding-right: 1em;
+    margin-bottom: 0em; } }
 @media screen and (min-width: 62em) {
   .flex-item--programmatic {
-    padding-left: 3em;
+    padding-left: 2em;
     padding-right: 2em; }
 
   .flex-item--imagen {
-    padding-top: 1em;
-    padding-left: 1em;
+    padding-left: 0em;
     padding-right: 1em; } }
 @media screen and (min-width: 75em) {
   .flex-item--programmatic {
-    padding-left: 3em;
-    padding-right: 3em; }
+    padding-left: 4em;
+    padding-right: 4em; }
 
   .flex-item--imagen {
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em; } }
+    padding-left: 2em;
+    padding-right: 3em; }
+
+  .flex-item--imagen:first-child {
+    padding-left: 2em;
+    padding-right: 0em; } }
+.directSales__section {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-color: #dbf8df; }
+
 /* ==========================================================================
    Twitter
    ========================================================================== */
@@ -2021,22 +2114,34 @@ a.current {
   width: 9em;
   height: 9em;
   border-radius: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   overflow: hidden; }
-
-.round__image--border-brand-primary {
-  border: 6px solid #22b238;
-  background-color: #22b238;
-  margin-top: -6em;
-  margin-bottom: 1em; }
 
 .round__image--border-light-brand-primary {
   border: 6px solid #9beca7;
   background-color: #9beca7;
-  margin-top: -6em;
   margin-bottom: 1em; }
 
 .round__image--border-brand-dark {
   border: 6px solid #2f3d48;
   background-color: #2f3d48;
-  margin-top: -6em;
+  margin-bottom: 1em; }
+
+.round__image--margin {
+  margin-top: -6em; }
+
+.round__image--border-brand-primary {
+  border: 6px solid #22b238;
+  background-color: #53f476;
+  margin-bottom: 1em; }
+
+.round__image--border-warning {
+  border: 6px solid #c6ac42;
+  background-color: #f7d752;
+  margin-bottom: 1em; }
+
+.round__image--border-error {
+  border: 6px solid #c25f44;
+  background-color: #f27755;
   margin-bottom: 1em; }

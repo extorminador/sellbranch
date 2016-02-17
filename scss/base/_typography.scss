@@ -39,8 +39,6 @@ h3,
 .t-h3 {
   font-size: 1.375em;     // 22px
   font-weight: 300;
-  padding-top: 4em;
-  padding-bottom: 0.75em;
   text-align: center;
 }
 
@@ -72,6 +70,11 @@ h6,
   font-weight: 400;
 }
 
+.h3-padding {
+  padding-top: 4em;
+  padding-bottom: 0.75em;
+}
+
 p {
   font-weight: 400;
   text-align: left;
@@ -82,20 +85,56 @@ p {
   margin-top: 0em;
 }
 
+.pre-line {
+  white-space: normal;
+}
+
+
 .text-center {
   text-align: center;
 }
 
+.text-justify {
+  text-align: left;
+}
+
+// Text Color
+
 .text-primary {
   color: $brand-primary;
+}
+
+.tex-secondary {
+  color: $brand-secondary;
+}
+
+.text-dark {
+  color: $brand-dark;
 }
 
 .text-light-gray {
   color: $text-light-gray;
 }
 
+.text-success {
+  color: $color-success;
+}
+
+.text-warning {
+  color: $color-warning;
+}
+
+.text-error {
+  color: $color-error;
+}
+
+
 
 @media screen and (min-width: $screen-sm) {
+
+  .text-justify {
+    text-align: justify;
+  }
 
   h2,
   .t-h2 {
@@ -105,7 +144,7 @@ p {
   h3,
   .t-h3 {
     font-size: 1.5em;     // 24px
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .intro {
@@ -115,6 +154,8 @@ p {
   text-align: center;
   }
 
+
+
 }
 
 
@@ -123,6 +164,10 @@ p {
   p {
     font-size: 1.125em;
     line-height: 1.875rem;
+  }
+
+  .pre-line {
+    @include preline;
   }
 
 }

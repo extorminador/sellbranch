@@ -1,3 +1,13 @@
 @mixin transicion {
    transition: all 0.5s ease;
 }
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin preline {
+  white-space: pre-line;
+}

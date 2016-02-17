@@ -6,10 +6,12 @@ $brand-secondary:       #00a6eb; // Sellbranch blue
 $brand-dark:            #2f3d48; // Sellbranch darkgray
 $brand-light:           #4ece4e; // Sellbranch lightgree
 
-$color-success:         #4caf50;
+
+
+$color-success:         #53f476;
 $color-info:            #5bc0de;
-$color-warning:         #f0ad4e;
-$color-error:           #e74c3c;
+$color-warning:         #c6ac42;
+$color-error:           #c25f44;
 
 $body-bg:               #ffffff;
 
@@ -45,7 +47,7 @@ $box-shadow:            0 0 5px $shadow-color;
 
 $text-color:            $white;       // deprecated. Use $text-body instead.
 $text-body:             $gray;
-$text-light-gray:             lighten($brand-dark, 45%);
+$text-light-gray:       lighten($brand-dark, 45%);
 
 // $text-color-map: (
 //   primary:              $brand-primary,
