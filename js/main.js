@@ -1,3 +1,64 @@
+/***************** Header BG Scroll ******************/
+function menu()
+    {
+    var navigation = document.getElementsByClassName('navigation');
+    var nav = document.getElementById('js-navigation');
+    var logo = document.getElementById('js-logo');
+    var header = document.getElementById('js-header');
+
+     if(window.pageYOffset>=50){
+
+
+
+
+        // Navigation
+        navigation[0].style.backgroundColor = "#fcfcfc";
+        navigation[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.1)";
+
+        // Logotype
+        logo.setAttribute("src", "img/Sellbranch-logo.svg");
+
+        // Header
+        header.style.padding = "15px 0 20px 0";
+        header.style.borderBottom = "none";
+
+        // Nav menu
+        var links = document.querySelectorAll('#js-nav .js-link');
+        var i;
+        for (i = 0; i < links.length; i++){
+            links[i].style.color = "#2f3d48";
+        }
+
+     }
+    else{
+        // Navigation
+        navigation[0].style.backgroundColor = "transparent";
+        navigation[0].style.boxShadow = "none";
+
+        // Logo
+        logo.setAttribute("src", "img/SellbranchWhite.svg");
+
+        // Header
+        header.style.padding = "30px 0";
+        header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
+
+        // Nav menu
+        var links = document.querySelectorAll('#js-nav .js-link');
+        var i;
+        for (i = 0; i < links.length; i++){
+            links[i].style.color = "#ffffff";
+        }
+    }
+    }window.addEventListener('scroll',menu);
+
+
+
+
+
+/***************** Waypoint ******************/
+/* https://github.com/imakewebthings/waypoints
+**********************************************/
+
 $(function(){
         $('a.smoothScroll').smoothScroll({
           offset: -50,
@@ -38,77 +99,89 @@ $(function(){
     });
 
 
-  /***************** Header BG Scroll ******************/
-  $(function() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
 
-      if (scroll >= 50) {
+  // $(function() {
+  //   $(window).scroll(function() {
+  //     var scroll = $(window).scrollTop();
 
-
-        $("#logo").attr("src", "img/Sellbranch-logo.svg");
-
-        $('section.navigation').addClass('fixed');
-
-        $('#main_nav li a').addClass('nav_fixed');
-
-        $('header').css({
-          "border-bottom": "none",
-          "padding": "15px 0 20px 0"
-        });
-      } else {
-        $("#logo").attr("src", "img/SellbranchWhite.svg");
-
-        $('section.navigation').removeClass('fixed');
-
-        $('#main_nav li a').removeClass('nav_fixed');
+  //     if (window.pageYOffset >= 50) {
 
 
-        $('section.navigation').css({
-          "border-bottom": "none"
-        });
-        $('header').css({
-          "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
-          "padding": "30px 0"
-        });
-      }
+  //       $("#logo").attr("src", "img/Sellbranch-logo.svg");
+
+
+  //       $('section.navigation').css({
+  //           "background": "#ffffff",
+  //           "position": "fixed",
+  //           "box-shadow": "0px 2px 1px 0px rgba(0, 0, 0, 0.1)"
+  //         });
+
+  //       $('#main_nav li a').css({
+  //           "color": "#2f3d48"
+  //       });
+
+  //       $('header').css({
+  //         "border-bottom": "none",
+  //         "padding": "15px 0 20px 0"
+  //       });
+  //     } else {
+  //       $("#logo").attr("src", "img/SellbranchWhite.svg");
+
+  //       $('section.navigation').css({
+  //         "border-bottom": "none",
+  //         "background": "none",
+  //         "box-shadow": "none"
+  //       });
+
+  //       $('#main_nav li a').css({
+  //           "color": "#ffffff"
+  //       });
+
+
+  //       $('header').css({
+  //         "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
+  //         "padding": "30px 0"
+  //       });
+  //     }
+  //   });
+  // });
+
+
+
+
+
+
+
+
+  /***************** Call the rippler ******************/
+  //   $(".rippler").rippler({
+  //   effectClass      :  'rippler-effect'
+  //   ,effectSize      :  1      // Default size (width & height)
+  //   ,addElement      :  'div'   // e.g. 'svg'(feature)
+  //   ,duration        :  300
+  //   , Wait           :  1000
+  // });
+
+
+
+
+
+  /***************** Retina Image ******************/
+
+    if (window.devicePixelRatio > 1) {
+
+    var lowresImages = $('img');
+
+
+
+    lowresImages.each(function(i) {
+
+        var lowres = $(this).attr('src');
+
+        var highres = lowres.replace(".", "@2x.");
+
+        $(this).attr('src', highres);
+
     });
-  });
 
-
-
-
-
-
-
-
-/*  $(function() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-
-      if (scroll >= 50) {
-        $('section.navigation').addClass('fixed');
-        // $('#logo').atrr("src", '../img/Sellbranch-logo.svg');
-        // $('#main_nav li a').addClass('nav_fixed');
-        $('header').css({
-          "border-bottom": "none",
-          "padding": "15px 0 10px 0"
-        });
-        // $('#main_nav li a').addClass('nav_fixed')
-        // $('#main_nav li a').addClass('nav_fixed');
-      } else {
-        $('section.navigation').removeClass('fixed');
-        $('#logo').atrr("src", '../img/SellbranchWhite.svg');
-        // $('#main_nav li a').removeClass('nav_fixed')
-        // $('section.navigation').css({
-        //   "border-bottom": "none"
-        // });
-        $('header').css({
-          "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
-          "padding": "30px 0"
-        });
-      }
-    });
-  });
-
-  */
+}

@@ -21,6 +21,30 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 */
 (function(){var t=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}return-1},e=[].slice;(function(t,e){if(typeof define==="function"&&define.amd){return define("waypoints",["jquery"],function(n){return e(n,t)})}else{return e(t.jQuery,t)}})(this,function(n,r){var i,o,l,s,f,u,c,a,h,d,p,y,v,w,g,m;i=n(r);a=t.call(r,"ontouchstart")>=0;s={horizontal:{},vertical:{}};f=1;c={};u="waypoints-context-id";p="resize.waypoints";y="scroll.waypoints";v=1;w="waypoints-waypoint-ids";g="waypoint";m="waypoints";o=function(){function t(t){var e=this;this.$element=t;this.element=t[0];this.didResize=false;this.didScroll=false;this.id="context"+f++;this.oldScroll={x:t.scrollLeft(),y:t.scrollTop()};this.waypoints={horizontal:{},vertical:{}};this.element[u]=this.id;c[this.id]=this;t.bind(y,function(){var t;if(!(e.didScroll||a)){e.didScroll=true;t=function(){e.doScroll();return e.didScroll=false};return r.setTimeout(t,n[m].settings.scrollThrottle)}});t.bind(p,function(){var t;if(!e.didResize){e.didResize=true;t=function(){n[m]("refresh");return e.didResize=false};return r.setTimeout(t,n[m].settings.resizeThrottle)}})}t.prototype.doScroll=function(){var t,e=this;t={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(a&&(!t.vertical.oldScroll||!t.vertical.newScroll)){n[m]("refresh")}n.each(t,function(t,r){var i,o,l;l=[];o=r.newScroll>r.oldScroll;i=o?r.forward:r.backward;n.each(e.waypoints[t],function(t,e){var n,i;if(r.oldScroll<(n=e.offset)&&n<=r.newScroll){return l.push(e)}else if(r.newScroll<(i=e.offset)&&i<=r.oldScroll){return l.push(e)}});l.sort(function(t,e){return t.offset-e.offset});if(!o){l.reverse()}return n.each(l,function(t,e){if(e.options.continuous||t===l.length-1){return e.trigger([i])}})});return this.oldScroll={x:t.horizontal.newScroll,y:t.vertical.newScroll}};t.prototype.refresh=function(){var t,e,r,i=this;r=n.isWindow(this.element);e=this.$element.offset();this.doScroll();t={horizontal:{contextOffset:r?0:e.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:e.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?n[m]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return n.each(t,function(t,e){return n.each(i.waypoints[t],function(t,r){var i,o,l,s,f;i=r.options.offset;l=r.offset;o=n.isWindow(r.element)?0:r.$element.offset()[e.offsetProp];if(n.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(e.contextDimension*i/100)}}r.offset=o-e.contextOffset+e.contextScroll-i;if(r.options.onlyOnScroll&&l!=null||!r.enabled){return}if(l!==null&&l<(s=e.oldScroll)&&s<=r.offset){return r.trigger([e.backward])}else if(l!==null&&l>(f=e.oldScroll)&&f>=r.offset){return r.trigger([e.forward])}else if(l===null&&e.oldScroll>=r.offset){return r.trigger([e.forward])}})})};t.prototype.checkEmpty=function(){if(n.isEmptyObject(this.waypoints.horizontal)&&n.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([p,y].join(" "));return delete c[this.id]}};return t}();l=function(){function t(t,e,r){var i,o;r=n.extend({},n.fn[g].defaults,r);if(r.offset==="bottom-in-view"){r.offset=function(){var t;t=n[m]("viewportHeight");if(!n.isWindow(e.element)){t=e.$element.height()}return t-n(this).outerHeight()}}this.$element=t;this.element=t[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=e;this.enabled=r.enabled;this.id="waypoints"+v++;this.offset=null;this.options=r;e.waypoints[this.axis][this.id]=this;s[this.axis][this.id]=this;i=(o=this.element[w])!=null?o:[];i.push(this.id);this.element[w]=i}t.prototype.trigger=function(t){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,t)}if(this.options.triggerOnce){return this.destroy()}};t.prototype.disable=function(){return this.enabled=false};t.prototype.enable=function(){this.context.refresh();return this.enabled=true};t.prototype.destroy=function(){delete s[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};t.getWaypointsByElement=function(t){var e,r;r=t[w];if(!r){return[]}e=n.extend({},s.horizontal,s.vertical);return n.map(r,function(t){return e[t]})};return t}();d={init:function(t,e){var r;if(e==null){e={}}if((r=e.handler)==null){e.handler=t}this.each(function(){var t,r,i,s;t=n(this);i=(s=e.context)!=null?s:n.fn[g].defaults.context;if(!n.isWindow(i)){i=t.closest(i)}i=n(i);r=c[i[0][u]];if(!r){r=new o(i)}return new l(t,r,e)});n[m]("refresh");return this},disable:function(){return d._invoke.call(this,"disable")},enable:function(){return d._invoke.call(this,"enable")},destroy:function(){return d._invoke.call(this,"destroy")},prev:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e>0){return t.push(n[e-1])}})},next:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e<n.length-1){return t.push(n[e+1])}})},_traverse:function(t,e,i){var o,l;if(t==null){t="vertical"}if(e==null){e=r}l=h.aggregate(e);o=[];this.each(function(){var e;e=n.inArray(this,l[t]);return i(o,e,l[t])});return this.pushStack(o)},_invoke:function(t){this.each(function(){var e;e=l.getWaypointsByElement(this);return n.each(e,function(e,n){n[t]();return true})});return this}};n.fn[g]=function(){var t,r;r=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(d[r]){return d[r].apply(this,t)}else if(n.isFunction(r)){return d.init.apply(this,arguments)}else if(n.isPlainObject(r)){return d.init.apply(this,[null,r])}else if(!r){return n.error("jQuery Waypoints needs a callback function or handler option.")}else{return n.error("The "+r+" method does not exist in jQuery Waypoints.")}};n.fn[g].defaults={context:r,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};h={refresh:function(){return n.each(c,function(t,e){return e.refresh()})},viewportHeight:function(){var t;return(t=r.innerHeight)!=null?t:i.height()},aggregate:function(t){var e,r,i;e=s;if(t){e=(i=c[n(t)[0][u]])!=null?i.waypoints:void 0}if(!e){return[]}r={horizontal:[],vertical:[]};n.each(r,function(t,i){n.each(e[t],function(t,e){return i.push(e)});i.sort(function(t,e){return t.offset-e.offset});r[t]=n.map(i,function(t){return t.element});return r[t]=n.unique(r[t])});return r},above:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset<=t.oldScroll.y})},below:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset>t.oldScroll.y})},left:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset<=t.oldScroll.x})},right:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset>t.oldScroll.x})},enable:function(){return h._invoke("enable")},disable:function(){return h._invoke("disable")},destroy:function(){return h._invoke("destroy")},extendFn:function(t,e){return d[t]=e},_invoke:function(t){var e;e=n.extend({},s.vertical,s.horizontal);return n.each(e,function(e,n){n[t]();return true})},_filter:function(t,e,r){var i,o;i=c[n(t)[0][u]];if(!i){return[]}o=[];n.each(i.waypoints[e],function(t,e){if(r(i,e)){return o.push(e)}});o.sort(function(t,e){return t.offset-e.offset});return n.map(o,function(t){return t.element})}};n[m]=function(){var t,n;n=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(h[n]){return h[n].apply(null,t)}else{return h.aggregate.call(null,n)}};n[m].settings={resizeThrottle:100,scrollThrottle:30};return i.load(function(){return n[m]("refresh")})})}).call(this);
 
+/*!
+ * rippler v0.1.1
+ * http://blivesta.github.io/rippler/
+ * Licensed under MIT
+ * Author : blivesta
+ * http://blivesta.com/
+ */
+(function($){"use strict";var namespace="rippler";var methods={init:function(options){options=$.extend({effectClass:"rippler-effect",effectSize:16,addElement:"div",duration:600},options);return this.each(function(){var _this=this;var $this=$(this);var data=$this.data(namespace);if(!data){options=$.extend({},options);$this.data(namespace,{options:options});if(typeof document.ontouchstart!="undefined"){$this.on("touchstart."+namespace,function(event){var $self=$(this);methods.elementAdd.call(_this,$self,event)});$this.on("touchend."+namespace,function(event){var $self=$(this);methods.effect.call(_this,$self,event)})}else{$this.on("mousedown."+namespace,function(event){var $self=$(this);methods.elementAdd.call(_this,$self,event)});$this.on("mouseup."+namespace,function(event){var $self=$(this);methods.effect.call(_this,$self,event)})}}})},template:function(options){var $this=$(this);options=$this.data(namespace).options;var element;var svgElementClass="rippler-svg";var divElementClass="rippler-div";var circle='<circle cx="'+options.effectSize+'" cy="'+options.effectSize+'" r="'+options.effectSize/2+'">';var svgElement='<svg class="'+options.effectClass+" "+svgElementClass+'" xmlns="http://www.w3.org/2000/svg" viewBox="'+options.effectSize/2+" "+options.effectSize/2+" "+options.effectSize+" "+options.effectSize+'">'+circle+"</svg>";var divElement='<div class="'+options.effectClass+" "+divElementClass+'"></div>';if(options.addElement==="svg"){element=svgElement}else{element=divElement}return element},elementAdd:function($self,event,options){var _this=this;var $this=$(this);options=$this.data(namespace).options;$self.append(methods.template.call(_this));var $effect=$self.find("."+options.effectClass);var selfOffset=$self.offset();var eventX=methods.targetX.call(_this,event);var eventY=methods.targetY.call(_this,event);$effect.css({width:options.effectSize,height:options.effectSize,left:eventX-selfOffset.left-options.effectSize/2,top:eventY-selfOffset.top-options.effectSize/2});return _this},effect:function($self,event,options){var _this=this;var $this=$(this);options=$this.data(namespace).options;var $effect=$("."+options.effectClass);var selfOffset=$self.offset();var thisW=$this.outerWidth();var thisH=$this.outerHeight();var effectMaxWidth=methods.diagonal(thisW,thisH)*2;var eventX=methods.targetX.call(_this,event);var eventY=methods.targetY.call(_this,event);$effect.css({width:effectMaxWidth,height:effectMaxWidth,left:eventX-selfOffset.left-effectMaxWidth/2,top:eventY-selfOffset.top-effectMaxWidth/2,transition:"all "+options.duration/1e3+"s ease-out"});return methods.elementRemove.call(_this)},elementRemove:function(options){var _this=this;var $this=$(this);options=$this.data(namespace).options;var $effect=$("."+options.effectClass);setTimeout(function(){$effect.css({opacity:0,transition:"all "+options.duration/1e3+"s ease-out"});setTimeout(function(){$effect.remove()},options.duration*1.5)},options.duration);return _this},targetX:function(event){var e=event.originalEvent;var eventX;if(typeof document.ontouchstart!="undefined"){eventX=e.changedTouches[0].pageX}else{eventX=e.pageX}return eventX},targetY:function(event){var e=event.originalEvent;var eventY;if(typeof document.ontouchstart!="undefined"){eventY=e.changedTouches[0].pageY}else{eventY=e.pageY}return eventY},diagonal:function(x,y){if(x>0&&y>0)return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));else return false},destroy:function(){return this.each(function(){var $this=$(this);$(window).unbind("."+namespace);$this.removeData(namespace)})}};$.fn.rippler=function(method){if(methods[method]){return methods[method].apply(this,Array.prototype.slice.call(arguments,1))}else if(typeof method==="object"||!method){return methods.init.apply(this,arguments)}else{$.error("Method "+method+" does not exist on jQuery."+namespace)}}})(jQuery);
+
+/*!
+ * Waves v0.7.4
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+!function(a,b){"use strict";"function"==typeof define&&define.amd?define([],function(){return b.apply(a)}):"object"==typeof exports?module.exports=b.call(a):a.Waves=b.call(a)}("object"==typeof global?global:this,function(){"use strict";function a(a){return null!==a&&a===a.window}function b(b){return a(b)?b:9===b.nodeType&&b.defaultView}function c(a){var b=typeof a;return"function"===b||"object"===b&&!!a}function d(a){return c(a)&&a.nodeType>0}function e(a){var b=m.call(a);return"[object String]"===b?l(a):c(a)&&/^\[object (HTMLCollection|NodeList|Object)\]$/.test(b)&&a.hasOwnProperty("length")?a:d(a)?[a]:[]}function f(a){var c,d,e={top:0,left:0},f=a&&a.ownerDocument;return c=f.documentElement,"undefined"!=typeof a.getBoundingClientRect&&(e=a.getBoundingClientRect()),d=b(f),{top:e.top+d.pageYOffset-c.clientTop,left:e.left+d.pageXOffset-c.clientLeft}}function g(a){var b="";for(var c in a)a.hasOwnProperty(c)&&(b+=c+":"+a[c]+";");return b}function h(a,b,c){if(c){c.classList.remove("waves-rippling");var d=c.getAttribute("data-x"),e=c.getAttribute("data-y"),f=c.getAttribute("data-scale"),h=c.getAttribute("data-translate"),i=Date.now()-Number(c.getAttribute("data-hold")),j=350-i;0>j&&(j=0),"mousemove"===a.type&&(j=150);var k="mousemove"===a.type?2500:o.duration;setTimeout(function(){var a={top:e+"px",left:d+"px",opacity:"0","-webkit-transition-duration":k+"ms","-moz-transition-duration":k+"ms","-o-transition-duration":k+"ms","transition-duration":k+"ms","-webkit-transform":f+" "+h,"-moz-transform":f+" "+h,"-ms-transform":f+" "+h,"-o-transform":f+" "+h,transform:f+" "+h};c.setAttribute("style",g(a)),setTimeout(function(){try{b.removeChild(c)}catch(a){return!1}},k)},j)}}function i(a){if(q.allowEvent(a)===!1)return null;for(var b=null,c=a.target||a.srcElement;null!==c.parentElement;){if(c.classList.contains("waves-effect")&&!(c instanceof SVGElement)){b=c;break}c=c.parentElement}return b}function j(a){var b=i(a);if(null!==b){if(b.disabled||b.getAttribute("disabled")||b.classList.contains("disabled"))return;if(q.registerEvent(a),"touchstart"===a.type&&o.delay){var c=!1,d=setTimeout(function(){d=null,o.show(a,b)},o.delay),e=function(e){d&&(clearTimeout(d),d=null,o.show(a,b)),c||(c=!0,o.hide(e,b))},f=function(a){d&&(clearTimeout(d),d=null),e(a)};b.addEventListener("touchmove",f,!1),b.addEventListener("touchend",e,!1),b.addEventListener("touchcancel",e,!1)}else o.show(a,b),n&&(b.addEventListener("touchend",o.hide,!1),b.addEventListener("touchcancel",o.hide,!1)),b.addEventListener("mouseup",o.hide,!1),b.addEventListener("mouseleave",o.hide,!1)}}var k=k||{},l=document.querySelectorAll.bind(document),m=Object.prototype.toString,n="ontouchstart"in window,o={duration:750,delay:200,show:function(a,b,c){if(2===a.button)return!1;b=b||this;var d=document.createElement("div");d.className="waves-ripple waves-rippling",b.appendChild(d);var e=f(b),h=0,i=0;"touches"in a&&a.touches.length?(h=a.touches[0].pageY-e.top,i=a.touches[0].pageX-e.left):(h=a.pageY-e.top,i=a.pageX-e.left),i=i>=0?i:0,h=h>=0?h:0;var j="scale("+b.clientWidth/100*3+")",k="translate(0,0)";c&&(k="translate("+c.x+"px, "+c.y+"px)"),d.setAttribute("data-hold",Date.now()),d.setAttribute("data-x",i),d.setAttribute("data-y",h),d.setAttribute("data-scale",j),d.setAttribute("data-translate",k);var l={top:h+"px",left:i+"px"};d.classList.add("waves-notransition"),d.setAttribute("style",g(l)),d.classList.remove("waves-notransition"),l["-webkit-transform"]=j+" "+k,l["-moz-transform"]=j+" "+k,l["-ms-transform"]=j+" "+k,l["-o-transform"]=j+" "+k,l.transform=j+" "+k,l.opacity="1";var m="mousemove"===a.type?2500:o.duration;l["-webkit-transition-duration"]=m+"ms",l["-moz-transition-duration"]=m+"ms",l["-o-transition-duration"]=m+"ms",l["transition-duration"]=m+"ms",d.setAttribute("style",g(l))},hide:function(a,b){b=b||this;for(var c=b.getElementsByClassName("waves-rippling"),d=0,e=c.length;e>d;d++)h(a,b,c[d])}},p={input:function(a){var b=a.parentNode;if("i"!==b.tagName.toLowerCase()||!b.classList.contains("waves-effect")){var c=document.createElement("i");c.className=a.className+" waves-input-wrapper",a.className="waves-button-input",b.replaceChild(c,a),c.appendChild(a);var d=window.getComputedStyle(a,null),e=d.color,f=d.backgroundColor;c.setAttribute("style","color:"+e+";background:"+f),a.setAttribute("style","background-color:rgba(0,0,0,0);")}},img:function(a){var b=a.parentNode;if("i"!==b.tagName.toLowerCase()||!b.classList.contains("waves-effect")){var c=document.createElement("i");b.replaceChild(c,a),c.appendChild(a)}}},q={touches:0,allowEvent:function(a){var b=!0;return/^(mousedown|mousemove)$/.test(a.type)&&q.touches&&(b=!1),b},registerEvent:function(a){var b=a.type;"touchstart"===b?q.touches+=1:/^(touchend|touchcancel)$/.test(b)&&setTimeout(function(){q.touches&&(q.touches-=1)},500)}};return k.init=function(a){var b=document.body;a=a||{},"duration"in a&&(o.duration=a.duration),"delay"in a&&(o.delay=a.delay),n&&(b.addEventListener("touchstart",j,!1),b.addEventListener("touchcancel",q.registerEvent,!1),b.addEventListener("touchend",q.registerEvent,!1)),b.addEventListener("mousedown",j,!1)},k.attach=function(a,b){a=e(a),"[object Array]"===m.call(b)&&(b=b.join(" ")),b=b?" "+b:"";for(var c,d,f=0,g=a.length;g>f;f++)c=a[f],d=c.tagName.toLowerCase(),-1!==["input","img"].indexOf(d)&&(p[d](c),c=c.parentElement),-1===c.className.indexOf("waves-effect")&&(c.className+=" waves-effect"+b)},k.ripple=function(a,b){a=e(a);var c=a.length;if(b=b||{},b.wait=b.wait||0,b.position=b.position||null,c)for(var d,g,h,i={},j=0,k={type:"mousedown",button:1},l=function(a,b){return function(){o.hide(a,b)}};c>j;j++)if(d=a[j],g=b.position||{x:d.clientWidth/2,y:d.clientHeight/2},h=f(d),i.x=h.left+g.x,i.y=h.top+g.y,k.pageX=i.x,k.pageY=i.y,o.show(k,d),b.wait>=0&&null!==b.wait){var m={type:"mouseup",button:1};setTimeout(l(m,d),b.wait)}},k.calm=function(a){a=e(a);for(var b={type:"mouseup",button:1},c=0,d=a.length;d>c;c++)o.hide(b,a[c])},k.displayEffect=function(a){k.init(a)},k});
+//# sourceMappingURL=waves.min.js.map
+
+/***************** Waypoint ******************/
+/* https://github.com/imakewebthings/waypoints
+**********************************************/
+
 $(function(){
         $('a.smoothScroll').smoothScroll({
           offset: -50,
@@ -61,79 +85,147 @@ $(function(){
     });
 
 
-  /***************** Header BG Scroll ******************/
-  $(function() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
+/***************** Header BG Scroll ******************/
+function menu()
+    {
+    var navigation = document.getElementsByClassName('navigation');
+    var nav = document.getElementById('js-navigation');
+    var logo = document.getElementById('js-logo');
+    var header = document.getElementById('js-header');
 
-      if (scroll >= 50) {
-
-
-        $("#logo").attr("src", "img/Sellbranch-logo.svg");
-
-        $('section.navigation').addClass('fixed');
-
-        $('#main_nav li a').addClass('nav_fixed');
-
-        $('header').css({
-          "border-bottom": "none",
-          "padding": "15px 0 20px 0"
-        });
-      } else {
-        $("#logo").attr("src", "img/SellbranchWhite.svg");
-
-        $('section.navigation').removeClass('fixed');
-
-        $('#main_nav li a').removeClass('nav_fixed');
+     if(window.pageYOffset>=50){
 
 
-        $('section.navigation').css({
-          "border-bottom": "none"
-        });
-        $('header').css({
-          "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
-          "padding": "30px 0"
-        });
-      }
+
+
+        // Navigation
+        navigation[0].style.backgroundColor = "#fcfcfc";
+        navigation[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.1)";
+
+        // Logotype
+        logo.setAttribute("src", "img/Sellbranch-logo.svg");
+
+        // Header
+        header.style.padding = "15px 0 20px 0";
+        header.style.borderBottom = "none";
+
+        // Nav menu
+        var links = document.querySelectorAll('#js-nav .js-link');
+        var i;
+        for (i = 0; i < links.length; i++){
+            links[i].style.color = "#2f3d48";
+        }
+
+     }
+    else{
+        // Navigation
+        navigation[0].style.backgroundColor = "transparent";
+        navigation[0].style.boxShadow = "none";
+
+        // Logo
+        logo.setAttribute("src", "img/SellbranchWhite.svg");
+
+        // Header
+        header.style.padding = "30px 0";
+        header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
+
+        // Nav menu
+        var links = document.querySelectorAll('#js-nav .js-link');
+        var i;
+        for (i = 0; i < links.length; i++){
+            links[i].style.color = "#ffffff";
+        }
+    }
+    }window.addEventListener('scroll',menu);
+
+
+
+
+
+  // $(function() {
+  //   $(window).scroll(function() {
+  //     var scroll = $(window).scrollTop();
+
+  //     if (window.pageYOffset >= 50) {
+
+
+  //       $("#logo").attr("src", "img/Sellbranch-logo.svg");
+
+
+  //       $('section.navigation').css({
+  //           "background": "#ffffff",
+  //           "position": "fixed",
+  //           "box-shadow": "0px 2px 1px 0px rgba(0, 0, 0, 0.1)"
+  //         });
+
+  //       $('#main_nav li a').css({
+  //           "color": "#2f3d48"
+  //       });
+
+  //       $('header').css({
+  //         "border-bottom": "none",
+  //         "padding": "15px 0 20px 0"
+  //       });
+  //     } else {
+  //       $("#logo").attr("src", "img/SellbranchWhite.svg");
+
+  //       $('section.navigation').css({
+  //         "border-bottom": "none",
+  //         "background": "none",
+  //         "box-shadow": "none"
+  //       });
+
+  //       $('#main_nav li a').css({
+  //           "color": "#ffffff"
+  //       });
+
+
+  //       $('header').css({
+  //         "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
+  //         "padding": "30px 0"
+  //       });
+  //     }
+  //   });
+  // });
+
+
+
+
+
+
+
+
+  /***************** Call the rippler ******************/
+  //   $(".rippler").rippler({
+  //   effectClass      :  'rippler-effect'
+  //   ,effectSize      :  1      // Default size (width & height)
+  //   ,addElement      :  'div'   // e.g. 'svg'(feature)
+  //   ,duration        :  300
+  //   , Wait           :  1000
+  // });
+
+
+
+
+
+  /***************** Retina Image ******************/
+
+    if (window.devicePixelRatio > 1) {
+
+    var lowresImages = $('img');
+
+
+
+    lowresImages.each(function(i) {
+
+        var lowres = $(this).attr('src');
+
+        var highres = lowres.replace(".", "@2x.");
+
+        $(this).attr('src', highres);
+
     });
-  });
 
-
-
-
-
-
-
-
-/*  $(function() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-
-      if (scroll >= 50) {
-        $('section.navigation').addClass('fixed');
-        // $('#logo').atrr("src", '../img/Sellbranch-logo.svg');
-        // $('#main_nav li a').addClass('nav_fixed');
-        $('header').css({
-          "border-bottom": "none",
-          "padding": "15px 0 10px 0"
-        });
-        // $('#main_nav li a').addClass('nav_fixed')
-        // $('#main_nav li a').addClass('nav_fixed');
-      } else {
-        $('section.navigation').removeClass('fixed');
-        $('#logo').atrr("src", '../img/SellbranchWhite.svg');
-        // $('#main_nav li a').removeClass('nav_fixed')
-        // $('section.navigation').css({
-        //   "border-bottom": "none"
-        // });
-        $('header').css({
-          "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
-          "padding": "30px 0"
-        });
-      }
-    });
-  });
-
-  */
+}
 
 

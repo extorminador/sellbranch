@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .round__image {
+  box-sizing: padding-box;
   position: relative;
   margin: 0 auto;
   z-index: 2;
@@ -12,6 +13,8 @@
   margin-top: 1em;
   margin-bottom: 1em;
   overflow: hidden;
+  @include transition-02;
+  -webkit-font-smoothing: antialiased;
 }
 
   // Round image for CEO and Founder
@@ -35,21 +38,36 @@
 
   // Direct Sales
 
-  .round__image--border-brand-primary {
-    border: 6px solid $brand-primary;
-    background-color: $color-success;
-    margin-bottom: 1em;
-  }
-
-
   .round__image--border-warning {
-    border: 6px solid $color-warning;
-    background-color: #f7d752;
+    border: 12px solid $color-warning;
+    background-color: $color-warning;
+    margin-bottom: 1em;
+
+  }
+
+    .round__image--border-warning:hover {
+      border: 18px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5em;
+    }
+
+  .round__image--border-brand-primary {
+    border: 12px solid #42c35e;
+    background-color: #42c35e;
     margin-bottom: 1em;
   }
+
+    .round__image--border-brand-primary:hover {
+      border: 18px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5em;
+    }
 
   .round__image--border-error {
-    border: 6px solid $color-error;
-    background-color: #f27755;
+    border: 12px solid $color-error;
+    background-color: $color-error;
     margin-bottom: 1em;
   }
+
+    .round__image--border-error:hover {
+      border: 18px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5em;
+    }

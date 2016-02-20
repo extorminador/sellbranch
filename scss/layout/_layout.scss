@@ -10,6 +10,15 @@ section {
   width: 100%;
 }
 
+.section_brand {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.section_lighten_brand-primary {
+  background-color: lighten($brand-primary, 50%);
+}
+
 .row_brand {
   max-width: $content-small-maxwidth;
 }
