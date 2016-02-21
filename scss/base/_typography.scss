@@ -25,6 +25,7 @@ h1,
 .t-h1 {
   font-weight: 200;
   font-smooth: auto;
+  line-height: 1.2em;
 }
 
 h2,
@@ -40,11 +41,12 @@ h3,
 .t-h3 {
   font-size: 1.375em;     // 22px
   font-weight: 300;
-  text-align: center;
 }
 
 h4,
 .t-h4 {
+  font-size: 1.125em;     // 18px
+  font-weight: 400;
 
 }
 
@@ -69,11 +71,6 @@ h6,
   margin-bottom: 1em;
   font-size: 1.125em;     // 18px
   font-weight: 400;
-}
-
-.h3-padding {
-  padding-top: 4em;
-  padding-bottom: 0.75em;
 }
 
 p {
@@ -105,7 +102,7 @@ p {
   color: $brand-primary;
 }
 
-.tex-secondary {
+.text-secondary {
   color: $brand-secondary;
 }
 

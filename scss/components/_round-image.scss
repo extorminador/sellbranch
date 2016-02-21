@@ -71,3 +71,12 @@
       border: 18px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 1.5em;
     }
+
+
+  // Contact
+
+   .round__image--border-contact{
+    border: 6px solid $brand-primary;
+    background-color: $brand-primary;
+    margin-bottom: 1em;
+  }

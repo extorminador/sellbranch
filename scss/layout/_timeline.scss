@@ -9,22 +9,22 @@
 }
 
   .timeline__col{
-    margin-bottom: 2em;
-    // background-color: rgba(55, 0, 0, 0.1);
+    margin-bottom: 0em;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
 
   .timeline__col:first-child {
-    margin-top: 8em;
+    margin-top: 4em;
   }
 
     .timeline__year-date {
+      padding-bottom: 0em;
       font-size: $font-size-base;
       font-weight: 600;
-      color: $brand-dark;
       text-align: left;
-      padding-bottom: 0em;
+      color: $brand-primary;
+      // background-color: red;
     }
 
     .timeline__year-circle {
@@ -32,6 +32,8 @@
     }
 
     .timeline__year-text {
+      margin-top: 0em;
+      margin-bottom: 0.5em;
       padding-left: 0em;
       padding-right: 0em;
       font-size: 1em;
@@ -51,7 +53,7 @@
   }
 
   .timeline__col:first-child {
-    margin-top: 10.25em;
+    margin-top: 10.15em;
     margin-left: 2%;
   }
 
@@ -60,7 +62,7 @@
   }
 
   .timeline__col:nth-child(3) {
-    margin-top: 5em;
+    margin-top: 5.15em;
   }
 
   .timeline__col:nth-child(4) {
@@ -76,18 +78,18 @@
   }
 
     .timeline__year-date {
+      padding-bottom: 0em;
       font-size: $font-size-base-medium;
       text-align: center;
-      padding-bottom: 0em;
     }
 
     .timeline__year-circle {
       display: block;
+      width: 1.3em;
+      height: 1.3em;
       margin: 0 auto;
       margin-top: 1em;
       margin-bottom: 2em;
-      width: 1.3em;
-      height: 1.3em;
       background-color: $white;
       border-radius: 6vw;
       border: 3px solid $brand-primary;
@@ -106,24 +108,24 @@
   }
 
     .timeline__col:first-child {
-      margin-top: 12em;
+      margin-top: 12.25em;
       margin-left: 2%;
     }
 
     .timeline__col:nth-child(2) {
-      margin-top: 7.75em;
+      margin-top: 8.15em;
     }
 
     .timeline__col:nth-child(3) {
-      margin-top: 5em;
+      margin-top: 5.25em;
     }
 
     .timeline__col:nth-child(4) {
-      margin-top: 2.75em;
+      margin-top: 3.25em;
     }
 
     .timeline__col:nth-child(5) {
-      margin-top: 1em;
+      margin-top: 1.5em;
     }
 
     .timeline__col:not(:first-child) {
@@ -150,19 +152,23 @@
     }
 
     .timeline__col:first-child {
-      margin-top: 11.75em;
+      margin-top: 12.25em;
     }
 
     .timeline__col:nth-child(2) {
-      margin-top: 8em;
+      margin-top: 8.5em;
     }
 
     .timeline__col:nth-child(3) {
-      margin-top: 5em;
+      margin-top: 5.5em;
+    }
+
+    .timeline__col:nth-child(4) {
+      margin-top: 3em;
     }
 
     .timeline__col:nth-child(5) {
-      margin-top: 0.75em;
+      margin-top: 1.25em;
     }
 
     .timeline__col:not(:first-child) {

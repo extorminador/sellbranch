@@ -44,11 +44,11 @@
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        margin-top:-50px;
-        margin-left:-50px;
-        opacity: 0.2;
-        background: rgba(0,0,0,0.1);
-        $gradient: rgba(0,0,0,.1) 0,rgba(0,0,0,.12) 40%,rgba(0,0,0,.12) 50%,rgba(0,0,0,.15) 60%,rgba(255,255,255,0) 70%;
+        margin-top: -50px;
+        margin-left: -50px;
+        opacity: 1;
+        background: rgba(0,0,0,1);
+        $gradient: rgba(0,166,235,0.1) 0,rgba(0,166,235,0.1) 40%,rgba(0,166,235,0.1) 50%,rgba(0,166,235,0.1) 60%,rgba(0,166,235,0.1) 70%;
         background: -webkit-radial-gradient($gradient);
         background: -o-radial-gradient($gradient);
         background: -moz-radial-gradient($gradient);

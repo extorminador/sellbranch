@@ -5,12 +5,12 @@
 // * Made with my own Flexbox or not with Flexboxgrid system
 
 .programmatic__section {
-  padding-top: 4em;
+  padding-top: 3em;
   padding-bottom: 6em;
 }
 
   .programmatic__row {
-    padding-bottom: 3em;
+    padding-bottom: 1em;
   }
 
   .flex-item{
@@ -40,6 +40,14 @@
 
 @media screen and (min-width: $screen-sm) {
 
+  .programmatic__section {
+    padding-top: 4em;
+  }
+
+    .programmatic__row {
+    padding-bottom: 1em;
+  }
+
     .flex-item--programmatic {
         padding-left: 2em;
         padding-right: 2em;
@@ -57,8 +65,9 @@
     }
 
       .flex-item--imagen {
-        padding-right: 1em;
+        margin-top: 2em;
         margin-bottom: 0em;
+        padding-right: 1em;
       }
 
 

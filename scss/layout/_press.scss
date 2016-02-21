@@ -1,7 +1,15 @@
 /* ==========================================================================
-   Direct Sales
+   Press
    ========================================================================== */
+.press__section {
+  margin-bottom: 2em;
+}
 
-.directSales__section {
-  background-color: lighten($brand-primary, 50%);
+
+@media screen and (min-width: $screen-sm) {
+
+  .press__section {
+  margin-bottom: 4em;
+}
+
 }

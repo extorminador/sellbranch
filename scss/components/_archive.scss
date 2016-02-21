@@ -1,5 +1,10 @@
+/* ==========================================================================
+   Archive
+   ========================================================================== */
+
 .archive {
-  width: 95%;
+  display: block;
+  width: 100%;
   border-top: 1px solid lighten($brand-secondary, 30%);
   @include transition;
   padding-left: 0.25em;
@@ -13,9 +18,10 @@
     border-bottom: 0px solid lighten($brand-secondary, 30%);
   }
 
+
 @media screen and (min-width: $screen-sm) {
 
-  .archive:nth-child(4) {
+  .archive:last-child{
     border-bottom: 1px solid lighten($brand-secondary, 30%);
   }
 
@@ -32,7 +38,7 @@
     font-size: 0.875em;
     color: $brand-secondary;
     padding-top: 0.75em;
-    padding-bottom: 0em;
+    padding-left: 0.5em;
   }
 
    .archive__content {
@@ -45,7 +51,7 @@
 
     .archive__file--download {
       width: 90%;
-      padding: 0.5rem 0rem 1.25rem 0;
+      padding: 0.5rem 0rem 1.25rem 0.5em;
       line-height: 1rem;
       color: $brand-dark;
       font-size: 1.125em;
@@ -57,7 +63,7 @@
       width: 18px;
       height: 22px;
       background: url('../img/download.svg') no-repeat;
-      margin-top: -8px;
+      margin-top: -5px;
       margin-left: 1em;
-
+      padding-right: 0.5em;
     }

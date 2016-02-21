@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Job
+   ========================================================================== */
+.job__section {
+  // margin-top: 2em;
+  margin-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 6em;
+  background-color: lighten($brand-secondary, 50%);
+}
+
+  .job__h2 {
+    text-align: center;
+  }
+
+  .job__text--carrier {
+    padding-right: 0em;
+  }
+
+  .job__text--presentation {
+    margin-top: 0;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+
+  .job__earth {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+@media screen and (min-width: $screen-sm) {
+
+  .job__section {
+    // margin-top: 6em;
+    padding-top: 2em;
+  }
+
+    .job__h2 {
+      padding-top: 2rem;
+      text-align: left;
+    }
+
+    .job__text--carrier {
+      padding-right: 2em;
+    }
+
+
+    .job__text--presentation {
+      padding-right: 1em;
+      text-align: left;
+    }
+
+    .job__earth {
+      margin-top: -6em;
+      margin-bottom: 2em;
+    }
+}

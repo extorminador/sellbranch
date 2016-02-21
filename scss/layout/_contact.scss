@@ -1,7 +1,10 @@
 /* ==========================================================================
-   Direct Sales
+   Round Image
    ========================================================================== */
 
-.directSales__section {
-  background-color: lighten($brand-primary, 50%);
+   .h4__line {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid $brand-dark;
+    background-color: red;
 }

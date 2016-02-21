@@ -3,15 +3,30 @@
    ========================================================================== */
 
 .polygon__light-brand-primary {
-  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  background-image: url("../img/pattern-gray.png");
+  background-attachment: fixed;
   background-color: lighten($brand-primary, 35%);
   margin-top: -7em;
-  height: 2em;
+  height: 32em;
+  padding-bottom: 10em;
 }
 
 .polygon__brand-dark {
-  clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0% 100%);
-  background-color: $brand-dark;
   margin-top: -7em;
-  height: 2em;
+  height: 42em;
+  margin-bottom: 2em;
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
+  background-image: url("../img/pattern.png");
+  background-attachment: fixed;
+  background-color: $brand-dark;
+}
+
+
+@media screen and (min-width: $screen-sm) {
+
+  .polygon__brand-dark {
+    height: 32em;
+    margin-bottom: 1em;
+  }
 }

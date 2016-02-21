@@ -19,6 +19,10 @@ section {
   background-color: lighten($brand-primary, 50%);
 }
 
+.section_lighten_brand-secondary {
+  background-color: lighten($brand-secondary, 50%);
+}
+
 .row_brand {
   max-width: $content-small-maxwidth;
 }
@@ -56,9 +60,9 @@ section {
 
 .flex-container {
   box-sizing: border-box;
+  display: block;
   width: 90%;
   margin: 0 auto;
-  display: block;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -83,8 +87,8 @@ section {
 @media screen and (min-width: $screen-sm) {
 
   .flex-container {
-    width: $content-small-maxwidth;
     display: flex;
+    width: $content-small-maxwidth;
     padding-left: 0em;
     padding-right: 0em;
   }

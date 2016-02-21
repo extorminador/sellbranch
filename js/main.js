@@ -148,24 +148,6 @@ $(function(){
 
 
 
-
-
-
-
-
-  /***************** Call the rippler ******************/
-  //   $(".rippler").rippler({
-  //   effectClass      :  'rippler-effect'
-  //   ,effectSize      :  1      // Default size (width & height)
-  //   ,addElement      :  'div'   // e.g. 'svg'(feature)
-  //   ,duration        :  300
-  //   , Wait           :  1000
-  // });
-
-
-
-
-
   /***************** Retina Image ******************/
 
     if (window.devicePixelRatio > 1) {

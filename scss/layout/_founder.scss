@@ -6,12 +6,12 @@
   margin-top: -10em;
 }
 
-  .founder__section-content {
-    background-color: $brand-dark;
-    width: 100%;
-    margin-top: -1px;
-    padding-bottom: 6em;
-  }
+  // .founder__section-content {
+  //   width: 100%;
+  //   margin-top: -1px;
+  //   padding-bottom: 6em;
+  //   // background-color: $brand-dark;
+  // }
 
 
 @media screen and (min-width: $screen-sm) {
@@ -22,8 +22,8 @@
     margin-bottom: 0em;
   }
     .founder__section-polygon {
-      margin-top: -9em;
       height: 5em;
+      margin-top: -9em;
     }
 
 }
