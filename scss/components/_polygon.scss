@@ -19,7 +19,7 @@
   clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
   background-image: url("../img/pattern.png");
   background-attachment: fixed;
-  background-color: $brand-dark;
+  background-color: darken($brand-dark, 5%);
 }
 
 

@@ -2,6 +2,38 @@
    Layout
    ========================================================================== */
 
+/* offset-0 for flexboxgrig */
+
+.col-xs-offset-0 {
+  margin-left: 0%;
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+
+}
+
+@media screen and (min-width: $screen-md) {
+  .col-md-offset-0 {
+    margin-left: 0%;
+  }
+}
+
+
+@media screen and (min-width: $screen-lg) {
+
+  .col-lg-offset-0 {
+    margin-left: 0%;
+  }
+}
+
+/* End offset-0 for flexboxgrig */
+
+
+
 .img {
   width: $imagen;
 }
@@ -9,6 +41,9 @@
 section {
   width: 100%;
 }
+
+
+
 
 .section_brand {
   padding-top: 4em;

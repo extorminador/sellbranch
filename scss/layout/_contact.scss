@@ -1,10 +1,44 @@
 /* ==========================================================================
-   Round Image
+   Contact
    ========================================================================== */
-
-   .h4__line {
-    width: 50%;
-    margin: 0 auto;
-    border-bottom: 1px solid $brand-dark;
-    background-color: red;
+.hidden_title-col-md {
+    display: none;
 }
+
+.hidden_title-col-lg {
+    display: block;
+}
+
+
+
+
+@media screen and (min-width: $screen-sm) {
+
+  .contact__section {
+   padding-top: 4em;
+  }
+
+  .title-padding {
+    padding-bottom: 1rem;
+  }
+
+  .padding-6 {
+    padding-top: 7em;
+  }
+
+}
+
+@media screen and (min-width: $screen-lg) {
+.hidden_title-col-md {
+    display: block;
+}
+
+.hidden_title-col-lg {
+    display: none;
+}
+
+  .padding-6 {
+    padding-top: 0em;
+  }
+}
+

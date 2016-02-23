@@ -15,3 +15,18 @@
 @mixin preline {
   white-space: pre-line;
 }
+
+@mixin round-image {
+  box-sizing: padding-box;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  width: 9em;
+  height: 9em;
+  border-radius: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  @include transition-02;
+  -webkit-font-smoothing: antialiased;
+}
