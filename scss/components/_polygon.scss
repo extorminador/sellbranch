@@ -3,19 +3,20 @@
    ========================================================================== */
 
 .polygon__light-brand-primary {
+  height: auto;
+  margin-top: -7em;
+  padding-bottom: 0em;
   clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
   background-image: url("../img/pattern-gray.png");
   background-attachment: fixed;
   background-color: lighten($brand-primary, 35%);
-  margin-top: -7em;
-  height: 32em;
-  padding-bottom: 10em;
 }
 
 .polygon__brand-dark {
+  height: auto;
   margin-top: -7em;
-  height: 42em;
   margin-bottom: 2em;
+  padding-bottom: 4em;
   clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
   background-image: url("../img/pattern.png");
   background-attachment: fixed;
@@ -26,7 +27,7 @@
 @media screen and (min-width: $screen-sm) {
 
   .polygon__brand-dark {
-    height: 32em;
     margin-bottom: 1em;
+    padding-bottom: 6em;
   }
 }

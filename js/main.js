@@ -6,20 +6,37 @@ function menu()
     var logo = document.getElementById('js-logo');
     var header = document.getElementById('js-header');
 
+    var mq = window.matchMedia( "(max-width: 767px)" );
+
      if(window.pageYOffset>=50){
 
-
-
-
         // Navigation
-        navigation[0].style.backgroundColor = "#fcfcfc";
-        navigation[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.1)";
+
+
 
         // Logotype
         logo.setAttribute("src", "img/Sellbranch-logo.svg");
 
-        // Header
-        header.style.padding = "15px 0 20px 0";
+
+        if (mq.matches) {
+          // window width is at least 767px
+
+          // Navigation
+          navigation[0].style.boxShadow = "0px 3px 3px 0px rgba(0, 0, 0, 0.3)";
+          navigation[0].style.backgroundColor = "#fdfdfd";
+
+          // Header
+          header.style.padding = "10px 0";
+        } else {
+          // window width is less than 767px
+
+          // Navigation
+          navigation[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.2)";
+          navigation[0].style.backgroundColor = "#fcfcfc";
+
+          // Header
+          header.style.padding = "15px 0";
+        }
         header.style.borderBottom = "none";
 
         // Nav menu
@@ -39,7 +56,14 @@ function menu()
         logo.setAttribute("src", "img/SellbranchWhite.svg");
 
         // Header
-        header.style.padding = "30px 0";
+        if (mq.matches) {
+          // window width is at least 767px
+          header.style.padding = "10px 0";
+        } else {
+          // window width is less than 767px
+          header.style.padding = "30px 0";
+        }
+        // header.style.padding = "30px 0";
         header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
 
         // Nav menu

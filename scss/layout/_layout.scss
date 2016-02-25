@@ -39,7 +39,8 @@
 }
 
 section {
-  width: 100%;
+  width: $container-small-maxwidth;
+  margin: 0 auto;
 }
 
 
@@ -60,6 +61,7 @@ section {
 
 .row_brand {
   max-width: $content-small-maxwidth;
+  margin: 0 auto;
 }
 
 // min-width: 768px
@@ -67,6 +69,7 @@ section {
 
   .row_brand {
     max-width: $content-small-maxwidth;
+    margin: 0 auto;
   }
 }
 

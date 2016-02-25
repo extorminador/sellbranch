@@ -34,6 +34,7 @@ h2,
   font-style: normal;
   font-weight: 200;
   padding-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 
@@ -92,6 +93,10 @@ p{
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-justify {
   text-align: left;
 }
@@ -142,7 +147,6 @@ p{
   h3,
   .t-h3 {
     font-size: 1.5em;     // 24px
-    font-weight: 400;
   }
 
   .intro {

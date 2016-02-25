@@ -6,11 +6,22 @@
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 1em;
+  margin-top: 2em;
   color: $brand-primary;
 }
 
 .twitter {
+  width: auto;
   margin: 0 auto;
   margin-top: 2em;
+}
+
+
+
+@media screen and (min-width: $screen-sm) {
+  .twitter {
+    width: auto;
+    margin-top: 0em;
+  }
+
 }
