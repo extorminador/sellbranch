@@ -736,7 +736,8 @@ textarea {
 html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased; }
+  -moz-font-smoothing: antialiased;
+  color: #2f3d48; }
 
 body {
   font-family: "Titillium Web", sans-serif;
@@ -771,7 +772,7 @@ h3,
 h4,
 .t-h4 {
   font-size: 1.125em;
-  font-weight: 400; }
+  font-weight: 600; }
 
 .subtitle {
   font-size: 1.125em;
@@ -824,6 +825,12 @@ p {
 
 .text-error {
   color: #c25f44; }
+
+.text-twitter {
+  color: #4099ff; }
+
+.text-yahoo {
+  color: #2d1152; }
 
 @media screen and (min-width: 48em) {
   .text-justify {
@@ -2336,6 +2343,19 @@ nav > ul > li > a:hover {
 .hidden_title-col-lg {
   display: block; }
 
+.title__maps {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  font-size: 2.25em;
+  font-weight: 200;
+  text-align: center;
+  color: #34a738; }
+
+.img_maps {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  height: 20em; }
+
 @media screen and (min-width: 48em) {
   .contact__section {
     padding-top: 4em; }
@@ -2343,17 +2363,15 @@ nav > ul > li > a:hover {
   .title-padding {
     padding-bottom: 1rem; }
 
-  .padding-6 {
-    padding-top: 7em; } }
+  .img_maps {
+    padding-top: 0em;
+    height: 25em; } }
 @media screen and (min-width: 75em) {
   .hidden_title-col-md {
     display: block; }
 
   .hidden_title-col-lg {
-    display: none; }
-
-  .padding-6 {
-    padding-top: 0em; } }
+    display: none; } }
 /* ==========================================================================
    Twitter
    ========================================================================== */
@@ -2373,6 +2391,16 @@ nav > ul > li > a:hover {
   .twitter {
     width: auto;
     margin-top: 0em; } }
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  margin-top: 4em;
+  padding: 2em;
+  text-align: center;
+  color: #9db0bf;
+  background-color: #2f3d48; }
+
 /* ==========================================================================
    Polygon
    ========================================================================== */
@@ -2443,7 +2471,7 @@ nav > ul > li > a:hover {
 .round__image--margin {
   margin-top: -6em; }
 
-.round__image--border-warning {
+.round__image--border-twitter {
   box-sizing: padding-box;
   position: relative;
   margin: 0 auto;
@@ -2457,15 +2485,11 @@ nav > ul > li > a:hover {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-font-smoothing: antialiased;
-  border: 12px solid #c6ac42;
-  background-color: #c6ac42;
+  border: 12px solid #4099ff;
+  background-color: #4099ff;
   margin-bottom: 1em; }
 
-.round__image--border-warning:hover {
-  border: 18px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5em; }
-
-.round__image--border-brand-primary {
+.round__image--border-yahoo {
   box-sizing: padding-box;
   position: relative;
   margin: 0 auto;
@@ -2479,13 +2503,9 @@ nav > ul > li > a:hover {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-font-smoothing: antialiased;
-  border: 12px solid #42c35e;
-  background-color: #42c35e;
+  border: 12px solid #2d1152;
+  background-color: #2d1152;
   margin-bottom: 1em; }
-
-.round__image--border-brand-primary:hover {
-  border: 18px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5em; }
 
 .round__image--border-error {
   box-sizing: padding-box;
@@ -2505,10 +2525,18 @@ nav > ul > li > a:hover {
   background-color: #c25f44;
   margin-bottom: 1em; }
 
-.round__image--border-error:hover {
-  border: 18px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5em; }
+@media screen and (min-width: 62em) {
+  .round__image--border-twitter:hover {
+    border: 18px solid #4099ff;
+    margin-bottom: 1.5em; }
 
+  .round__image--border-yahoo:hover {
+    border: 18px solid #2d1152;
+    margin-bottom: 1.5em; }
+
+  .round__image--border-error:hover {
+    border: 18px solid #c25f44;
+    margin-bottom: 1.5em; } }
 /* ==========================================================================
    Archive
    ========================================================================== */
@@ -2644,13 +2672,52 @@ nav > ul > li > a:hover {
   .card__mail {
     font-size: 0.9375rem !important; } }
 @media screen and (min-width: 75em) {
-  .card__area {
-    padding-top: 3rem; }
-
   .card__phone {
     font-size: 1rem !important; }
 
   .card__mail {
     font-size: 1rem !important; } }
+/* ==========================================================================
+   Button Up
+   ========================================================================== */
+.button {
+  z-index: 9000;
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding-left: 0em;
+  padding-right: 0em;
+  right: 10px;
+  bottom: 10%;
+  border: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  text-align: center;
+  background-color: rgba(55, 55, 55, 0.6); }
+
+.button:hover {
+  background-color: rgba(0, 166, 235, 0.6); }
+
+.buttom__icon {
+  display: block;
+  margin-left: 5px;
+  padding-left: 0px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/arrow.svg") no-repeat;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+
+@media screen and (min-width: 48em) {
+  .button {
+    width: 60px;
+    height: 60px;
+    right: 30px; }
+
+  .buttom__icon {
+    margin-left: 15px;
+    padding-left: 0px; } }
 
 /*# sourceMappingURL=main-min.css.map */

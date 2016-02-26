@@ -29,42 +29,49 @@
 
   // Direct Sales
 
-  .round__image--border-warning {
+  .round__image--border-twitter {
     @include round-image;
-    border: 12px solid $color-warning;
-    background-color: $color-warning;
+    border: 12px solid $tw;
+    background-color: $tw;
     margin-bottom: 1em;
 
   }
 
-    .round__image--border-warning:hover {
-      border: 18px solid rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5em;
-    }
 
-  .round__image--border-brand-primary {
+  .round__image--border-yahoo {
     @include round-image;
-    border: 12px solid #42c35e;
-    background-color: #42c35e;
+    border: 12px solid $yahoo;
+    background-color: $yahoo;
     margin-bottom: 1em;
+
   }
 
-    .round__image--border-brand-primary:hover {
-      border: 18px solid rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5em;
-    }
 
   .round__image--border-error {
     @include round-image;
     border: 12px solid $color-error;
     background-color: $color-error;
     margin-bottom: 1em;
+
   }
 
+
+@media screen and (min-width: $screen-md) {
+
+    .round__image--border-twitter:hover {
+      border: 18px solid $tw;
+      margin-bottom: 1.5em;
+    }
+    .round__image--border-yahoo:hover {
+      border: 18px solid $yahoo;
+      margin-bottom: 1.5em;
+    }
     .round__image--border-error:hover {
-      border: 18px solid rgba(0, 0, 0, 0.1);
+      border: 18px solid $color-error;
       margin-bottom: 1.5em;
     }
 
+
+}
 
 

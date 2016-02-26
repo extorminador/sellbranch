@@ -4,6 +4,7 @@ html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  color: $brand-dark;
 }
 
 body {
@@ -47,7 +48,7 @@ h3,
 h4,
 .t-h4 {
   font-size: 1.125em;     // 18px
-  font-weight: 400;
+  font-weight: 600;
 
 }
 
@@ -129,6 +130,14 @@ p{
 
 .text-error {
   color: $color-error;
+}
+
+.text-twitter {
+  color: $tw;
+}
+
+.text-yahoo {
+  color: $yahoo;
 }
 
 

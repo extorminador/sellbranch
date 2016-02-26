@@ -77,6 +77,32 @@ function menu()
 
 
 
+/***************** Scroll Up ******************
+**********************************************/
+
+  function scrollWin() {
+     setTimeout(function(){ window.scrollTo(0, 0); }, 300);
+  }
+
+/***************** Color Button ******************
+/* Change display to button
+**********************************************/
+
+  function colorButton() {
+
+    var button = document.getElementById('js-button-up');
+
+    if(window.pageYOffset>=300){
+      button.style.display = "block";
+    }
+    else{
+      button.style.display = "none";
+    }
+
+  }window.addEventListener('scroll',colorButton);
+
+
+
 
 
 /***************** Waypoint ******************/
@@ -121,55 +147,6 @@ $(function(){
             stickyNav();
         });
     });
-
-
-
-  // $(function() {
-  //   $(window).scroll(function() {
-  //     var scroll = $(window).scrollTop();
-
-  //     if (window.pageYOffset >= 50) {
-
-
-  //       $("#logo").attr("src", "img/Sellbranch-logo.svg");
-
-
-  //       $('section.navigation').css({
-  //           "background": "#ffffff",
-  //           "position": "fixed",
-  //           "box-shadow": "0px 2px 1px 0px rgba(0, 0, 0, 0.1)"
-  //         });
-
-  //       $('#main_nav li a').css({
-  //           "color": "#2f3d48"
-  //       });
-
-  //       $('header').css({
-  //         "border-bottom": "none",
-  //         "padding": "15px 0 20px 0"
-  //       });
-  //     } else {
-  //       $("#logo").attr("src", "img/SellbranchWhite.svg");
-
-  //       $('section.navigation').css({
-  //         "border-bottom": "none",
-  //         "background": "none",
-  //         "box-shadow": "none"
-  //       });
-
-  //       $('#main_nav li a').css({
-  //           "color": "#ffffff"
-  //       });
-
-
-  //       $('header').css({
-  //         "border-bottom": "1px solid rgba(255, 255, 255, 0.2)",
-  //         "padding": "30px 0"
-  //       });
-  //     }
-  //   });
-  // });
-
 
 
   /***************** Retina Image ******************/

@@ -4,7 +4,6 @@
 .card {
   width: 100%;
   margin-top: 2rem;
-  // background-color: red;
 }
 
 .card__area {
@@ -79,10 +78,6 @@
 
 
 @media screen and (min-width: $screen-lg) {
-
-  .card__area {
-    padding-top: 3rem;
-  }
 
   .card__phone {
     font-size: 1rem !important;
