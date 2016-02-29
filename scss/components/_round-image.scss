@@ -10,6 +10,7 @@
 
   .round__image--border-light-brand-primary {
     @include round-image;
+    margin-top: 0em;
     border: 6px solid lighten($brand-primary, 35%);
     background-color: lighten($brand-primary, 35%);
     margin-bottom: 1em;
@@ -19,12 +20,21 @@
     @include round-image;
     border: 6px solid $brand-dark;
     background-color: $brand-dark;
-    margin-bottom: 1em;
+    margin-top: -6em;
+    margin-bottom: 2em;
   }
 
     .round__image--margin {
-      margin-top: -6em;
+      // margin-top: -10em;
     }
+
+
+@media screen and (min-width: $screen-sm) {
+
+  .round__image--border-light-brand-primary {
+    margin-top: -8em;
+  }
+}
 
 
   // Direct Sales

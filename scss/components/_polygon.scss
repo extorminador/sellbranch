@@ -3,11 +3,10 @@
    ========================================================================== */
 
 .polygon__light-brand-primary {
-  position: relative;
   height: auto;
-  margin-top: -7em;
+  margin-top: -6em;
   padding-bottom: 0em;
-  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 2%, 100% 0%, 100% 100%, 0% 100%);
   background-image: url("../img/pattern-gray.png");
   background-attachment: fixed;
   background-color: lighten($brand-primary, 35%);
@@ -17,8 +16,9 @@
   height: auto;
   margin-top: -7em;
   margin-bottom: 2em;
+  padding-top: 0em;
   padding-bottom: 4em;
-  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 100%);
   background-image: url("../img/pattern.png");
   background-attachment: fixed;
   background-color: darken($brand-dark, 5%);
@@ -27,8 +27,15 @@
 
 @media screen and (min-width: $screen-sm) {
 
+  .polygon__light-brand-primary {
+    margin-top: -7em;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+}
+
   .polygon__brand-dark {
+    margin-top: -8em;
     margin-bottom: 1em;
     padding-bottom: 6em;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
   }
 }

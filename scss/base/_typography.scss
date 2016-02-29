@@ -19,7 +19,7 @@ p, blockquote {
   margin-top: 0;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
-
+  margin-bottom: 0;
 }
 
 h1,
@@ -43,6 +43,7 @@ h3,
 .t-h3 {
   font-size: 1.375em;     // 22px
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 h4,
@@ -79,10 +80,12 @@ p{
   font-weight: 400;
   text-align: left;
   margin-top: 1em;
+  margin-bottom: 0;
 }
 
 .no-top{
-  margin-top: 0em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .pre-line {

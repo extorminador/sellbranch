@@ -98,6 +98,18 @@ function menu()
 
 
 
+/***************** Scroll Up ******************
+*************** only for Firefox **************
+***********************************************/
+
+  function scrollWin() {
+     setTimeout(function(){ window.scrollTo(0, 0); }, 100);
+  }
+
+
+
+
+
 /***************** Waypoint ******************/
 /* https://github.com/imakewebthings/waypoints
 **********************************************/
@@ -105,8 +117,8 @@ function menu()
 $(function(){
         $('a.smoothScroll').smoothScroll({
           offset: -50,
-      scrollTarget: $(this).val()
-     });
+          scrollTarget: $(this).val()
+        });
 
        // Waypoints
        $('.post_article').waypoint(
