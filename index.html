@@ -15,6 +15,7 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+    <div  class="post_article" id="button-up"></div>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -22,7 +23,7 @@
         <!-- Add your site or application content here -->
 
       <!-- Cover & Header -->
-      <section class="cover cover__image" id="home">
+      <section class="fade-in one cover cover__image" id="home">
         <section class="navigation" id="js-navigation">
           <header id="js-header">
             <div class="header__container">
@@ -55,8 +56,8 @@
         <!-- H1 and Subtitle -->
         <div class="row row_brand">
           <article class="col-xs-10 col-xs-offset-1">
-            <h1><b>Sellbrach</b> helps leading publishers increase revenue</h1>
-            <p class="subtitle pre-line">Through a local sales network across Europe
+            <h1 class="fade-in two"><b>Sellbranch</b> helps leading publishers increase revenue</h1>
+            <p class="subtitle pre-line fade-in three">Through a local sales network across Europe
               and a real-time technology driven optimization platform.</p>
           </article>
         </div>
@@ -645,8 +646,11 @@
       </section> <!-- end Contact -->
 
       <div>
-        <button type="button" class="button" id="js-button-up" onclick="scrollWin()">
-        <i class="buttom__icon"></i>
+        <button type="button" class="button" id="js-button-up">
+        <!-- <button type="button" class="button" id="js-button-up" onclick="scrollWin()"> -->
+          <a href="#button-up" class="buttom__icon smoothScroll">
+            <img src="img/arrow.svg" alt="arrow">
+          </a>
         </button>
       </div>
 

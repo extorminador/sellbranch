@@ -9,7 +9,7 @@
   height: auto;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .fixed {
@@ -26,7 +26,6 @@
 /* ==========================================================================
    Header styles
    ========================================================================== */
-
 
 header {
   width: $content-small-maxwidth;

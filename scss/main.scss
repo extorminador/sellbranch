@@ -1,7 +1,7 @@
 // VENDOR
-// @import 'vendor/rippler';
-
 @import 'vendor/waves';
+
+@import 'components/animation';
 
 // UTILS
 // @import 'components/material';
@@ -14,6 +14,7 @@
 @import 'base/normalize';
 @import 'base/boileplay';
 @import 'base/typography';
+@import 'base/flexbox';
 
 // GRIDS -- Foundation + Normalize
 // @import 'layout/foundation';
@@ -22,16 +23,18 @@
 @import 'layout/flexboxgrid';
 @import 'layout/layout';
 
+
+
 // Layout
-@import 'layout/cover';
 @import 'layout/header';
+
+@import 'layout/cover';
 @import 'layout/smoothScroll';
 @import 'layout/about';
 @import 'layout/timeline';
 @import 'layout/ceo';
 @import 'layout/founder';
 @import 'layout/programmatic';
-// @import 'layout/direct-sales';
 @import 'layout/press';
 @import 'layout/job';
 @import 'layout/contact';
@@ -45,3 +48,6 @@
 @import 'components/archive';
 @import 'components/card';
 @import 'components/button-up';
+
+
+

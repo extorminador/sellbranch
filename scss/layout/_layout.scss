@@ -33,7 +33,6 @@
 /* End offset-0 for flexboxgrig */
 
 
-
 .img {
   width: $imagen;
 }
@@ -91,71 +90,6 @@ section {
   }
 }
 
-
-/* ==========================================================================
-   Flexbox
-   ========================================================================== */
-
-.flex-container {
-  box-sizing: border-box;
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-    .flex-item {
-        width: 100%;
-        margin:0 auto;
-    }
-
-.space-between {
-    justify-content: space-between;
-}
-
-.space-around {
-  justify-content: space-around;
-}
-
-
-
-// min-width: 768px
-@media screen and (min-width: $screen-sm) {
-
-  .flex-container {
-    display: flex;
-    width: $content-small-maxwidth;
-    padding-left: 0em;
-    padding-right: 0em;
-  }
-
-}
-
-
-
-
-
-// min-width: 992px
-@media screen and (min-width: $screen-md) {
-
-    .flex-container {
-    width: $content-medium-maxwidth;
-  }
-
-}
-
-
-
-
-
-// min-width: 1200px
-@media screen and (min-width: $screen-lg) {
-
-  .flex-container {
-    max-width: $content-maxwidth;
-  }
-}
 
 
 

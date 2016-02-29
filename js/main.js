@@ -77,13 +77,6 @@ function menu()
 
 
 
-/***************** Scroll Up ******************
-**********************************************/
-
-  function scrollWin() {
-     setTimeout(function(){ window.scrollTo(0, 0); }, 300);
-  }
-
 /***************** Color Button ******************
 /* Change display to button
 **********************************************/
