@@ -364,6 +364,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/photo-126001591.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.25318e+06,
+		"inputAbbreviatedPath": "\/img\/photo-126001591.jpg",
+		"outputAbbreviatedPath": "\/img\/photo-126001591.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/sellbranchlogo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -371,6 +382,28 @@
 		"initialSize": 3697,
 		"inputAbbreviatedPath": "\/img\/sellbranchlogo.png",
 		"outputAbbreviatedPath": "\/img\/sellbranchlogo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/space.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149651,
+		"inputAbbreviatedPath": "\/img\/space.jpg",
+		"outputAbbreviatedPath": "\/img\/space.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/space@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149651,
+		"inputAbbreviatedPath": "\/img\/space@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/space@2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
