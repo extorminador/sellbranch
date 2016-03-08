@@ -41,7 +41,7 @@ h2,
 
 h3,
 .t-h3 {
-  font-size: 1.375em;     // 22px
+  font-size: 1.25em;     // 20px
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -103,6 +103,10 @@ p{
 
 .text-justify {
   text-align: left;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 // Text Color

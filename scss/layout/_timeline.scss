@@ -10,12 +10,13 @@
 
   .timeline__col{
     margin-bottom: 0em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0em;
+    padding-right: 0em;
+    // background-color: blue;
   }
 
   .timeline__col:first-child {
-    margin-top: 4em;
+    margin-top: 6em;
   }
 
     .timeline__year-date {
@@ -36,15 +37,19 @@
       margin-bottom: 0.5em;
       padding-left: 0em;
       padding-right: 0em;
-      font-size: 1em;
-      line-height: 1.5em;
+      font-size: 0.875em;
+      line-height: 1.4em;
       text-align: left;
-      // background-color: rgba(0, 0, 0, 0.1);
+      // background-color: yellow;
     }
 
 
 
 @media screen and (min-width: $screen-sm) {
+
+  .row__timeline{
+    padding-bottom: 7em;
+  }
 
   .timeline__section {
     background: url("../img/timeline.svg") no-repeat;
@@ -102,6 +107,10 @@
       border: 3px solid $brand-primary;
     }
 
+    .timeline__year-text {
+      text-align: center;
+    }
+
 
 }
 
@@ -110,7 +119,7 @@
 @media screen and (min-width: $screen-md) {
 
   .row__timeline{
-    // background-color: rgba(22, 200, 0, 0.5);
+    padding-bottom: 12em;
   }
 
     .timeline__col:first-child {
@@ -145,12 +154,13 @@
 @media screen and (min-width: $screen-lg) {
 
   .row__timeline{
-    // background-color: rgba(200, 200, 0, 0.1);
+    // padding-bottom: 11em;
   }
 
     .timeline__col {
-      padding-left: 1em;
-      padding-right: 1em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+
     }
 
     .timeline__col:first-child {
