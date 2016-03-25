@@ -1,13 +1,13 @@
 /* ==========================================================================
    Contact
    ========================================================================== */
-.hidden_title-col-md {
-    display: none;
-}
+// .hidden_title-col-md {
+//     display: none;
+// }
 
-.hidden_title-col-lg {
-    display: block;
-}
+// .hidden_title-col-lg {
+//     display: block;
+// }
 
 .title__maps {
   padding-top: 2em;
@@ -37,22 +37,29 @@
     padding-bottom: 1rem;
   }
 
+  .title__maps {
+  font-size: 3em;
+}
+
   .img_maps {
-      padding-top: 0em;
     height: 25em;
   }
 
 }
 
-@media screen and (min-width: $screen-lg) {
+@media screen and (min-width: $screen-md) {
 
-  .hidden_title-col-md {
-      display: block;
-  }
+  // .hidden_title-col-md {
+  //     display: block;
+  // }
 
-  .hidden_title-col-lg {
-      display: none;
-  }
+  // .hidden_title-col-lg {
+  //     display: none;
+  // }
+
+  .img_maps {
+  padding-top: 0em;
+}
 
 }
 

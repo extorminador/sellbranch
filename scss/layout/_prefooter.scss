@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Prefooter
+   ========================================================================== */
+.prefooter {
+  margin-top: 4em;
+  padding: 2em 0;
+  background-color: lighten($brand-dark, 70%);
+}
+
+.h2__social {
+  width: 100%;
+  // text-align: center;
+  // margin: 0 auto;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: lighten($brand-dark, 35%);
+}
+
+
+.social {
+  margin-top: 3em;
+}
+
+.linked {
+  background-color: red;
+
+}
+
+.linkedlogo {
+  margin-top: 0px;
+}
+
+
+.iab {
+  background-color: blue;
+}
+
+.twitter {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 10px;
+  background-color: lighten($brand-dark, 75%);
+  border-radius: 10px;
+}
+
+
+@media screen and (min-width: $screen-sm) {
+  .social {
+    margin-top: 0em;
+  }
+
+  .linkedlogo {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .twitter {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 0em;
+  }
+
+}

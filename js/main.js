@@ -23,7 +23,7 @@ function menu()
 
           // Navigation
           navigation[0].style.boxShadow = "0px 3px 3px 0px rgba(0, 0, 0, 0.3)";
-          navigation[0].style.backgroundColor = "#fdfdfd";
+          navigation[0].style.backgroundColor = "#fcfcfc";
 
           // Header
           header.style.padding = "10px 0";

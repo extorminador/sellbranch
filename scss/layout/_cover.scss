@@ -23,13 +23,40 @@
     background-color: initial;
   }
 
+
+  .uk-cover-object {
+    // display: block;
+    // clear: both;
+    width: auto;
+    height: 350px;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .uk-cover-object {
+      left: 50%;
+      top: 50%;
+      position: relative;
+  }
+
+  .uk-position-absolute {
+    position: absolute!important;
+  }
+
     h1{
+      position: absolute;
+      z-index: 1000;
       margin-bottom: 0.25em;
-      padding-top: 4.5em;
+      margin-top: 4.5em;
+      padding-top: 1em;
       padding-bottom: 1em;
       font-size: 2em;
       text-align: center;
       color: $white;
+      background-color: rgba(52, 167, 55, 0.0);
     }
 
     .subtitle {
@@ -49,16 +76,25 @@
     min-height: 70%;
   }
 
+  .uk-cover-object {
+    width: auto;
+    height: 450px;
+  }
+
     h1 {
-      padding-top: 5.5em;
-      padding-bottom: 2em;
+      margin-top: 4em;
+      // padding-top: 2em;
+      // padding-bottom: 2em;
       font-size: 2.5em;
       line-height: 1em;
     }
 
     .subtitle {
-      padding-bottom: 3em;
+      margin-top: 0em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
       font-size: 1.5em;
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
 }
@@ -70,6 +106,11 @@
   .cover {
     min-height: 50%;
     margin-bottom: 0em;
+  }
+
+  .uk-cover-object {
+    width: auto;
+    height: 700px;
   }
 
     .cover__image {
@@ -86,8 +127,9 @@
     }
 
     h1 {
-      padding-top: 30%;
-      padding-bottom: 0;
+      margin-top: 30%;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
       font-size: 3.75em;
     }
 
@@ -96,7 +138,7 @@
       color: $white;
       text-align: center;
       line-height: 1.5em;
-      padding-bottom: 2em;
+      // padding-bottom: 2em;
     }
 }
 
@@ -108,8 +150,13 @@
   .cover {
     min-height: 60vh;
   }
+
+  .uk-cover-object {
+    width: auto;
+    height: 800px;
+  }
       h1 {
-        padding-top: 25vh;
+        margin-top: 22vh;
       }
 }
 
@@ -121,9 +168,15 @@
     min-height: 80vh;
   }
 
+  .uk-cover-object {
+    width: auto;
+    height: auto;
+  }
+
     h1 {
-      padding-top: 35vh;
-      padding-bottom: 0.5em;
+      margin-top: 32vh;
+      // padding-top: 0.5em;
+      // padding-bottom: 0.5em;
     }
 
 }

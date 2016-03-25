@@ -2,7 +2,7 @@
    Programmatic
    ========================================================================== */
 
-// * Made with my own Flexbox or not with Flexboxgrid system
+/* Made with my own Flexbox or not with Flexboxgrid system */
 
 .programmatic__section {
   padding-top: 3em;
@@ -10,7 +10,7 @@
 }
 
   .programmatic__row {
-    padding-bottom: 1em;
+    padding-bottom: 0em;
   }
 
   .flex-item{
@@ -21,6 +21,7 @@
     .flex-item--programmatic {
       padding-left: 0.5em;
       padding-right: 0.5em;
+      margin-top: 1em;
     }
 
       .flex-container--imagen {
