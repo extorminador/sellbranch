@@ -26,3 +26,123 @@
 .fade-in.three {
   animation-delay: 2s;
 }
+
+
+
+/**********************************************
+ ***************** Hideme Animated ************
+ **********************************************/
+.animatedFadeInUp
+{
+  opacity:0;
+}
+
+.animatedFadeInLeft
+{
+  opacity:0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.animatedFadeIn
+{
+  opacity:0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+}
+
+.delay { animation-delay: 0.5s; }
+
+.delay1 { animation-delay: 1s; }
+
+.delay125 { animation-delay: 1.25s; }
+
+.delay15 { animation-delay: 1.5s; }
+
+.delay175 { animation-delay: 1.75s; }
+
+
+/**********************************************
+ ***************** fadeInUp ************
+ **********************************************/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+/**********************************************
+ ***************** fadeInLeft ************
+ **********************************************/
+
+
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
