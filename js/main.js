@@ -174,7 +174,7 @@ $(function(){
 
 }
 
-/***************** Hideme Animated ******************/
+/***************** Animated ******************/
 /* https://github.com/imakewebthings/waypoints
 **********************************************/
 

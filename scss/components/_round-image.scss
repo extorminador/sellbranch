@@ -44,7 +44,7 @@
     border: 12px solid $tw;
     background-color: $tw;
     margin-bottom: 1em;
-
+    @include transition-02;
   }
 
 
@@ -53,7 +53,7 @@
     border: 12px solid $yahoo;
     background-color: $yahoo;
     margin-bottom: 1em;
-
+    @include transition-02;
   }
 
 
@@ -62,7 +62,7 @@
     border: 12px solid $color-error;
     background-color: $color-error;
     margin-bottom: 1em;
-
+    @include transition-02;
   }
 
 
