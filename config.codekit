@@ -1090,6 +1090,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/others.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5456,
+		"inputAbbreviatedPath": "\/img\/others.jpg",
+		"outputAbbreviatedPath": "\/img\/others.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/others@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11795,
+		"inputAbbreviatedPath": "\/img\/others@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/others@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/pattern-gray.png": {
 		"fileType": 32768,
 		"ignore": 0,

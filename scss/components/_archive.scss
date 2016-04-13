@@ -5,23 +5,26 @@
 .archive {
   display: block;
   width: 100%;
-  border-top: 1px solid lighten($brand-secondary, 30%);
   @include transition;
   padding-left: 0.25em;
 }
 
-  .archive:last-child {
-    border-bottom: 1px solid lighten($brand-secondary, 30%);
+  .archive__border--top {
+    border-top: 1px solid lighten($brand-secondary, 30%);
   }
 
-  .archive:nth-child(4) {
-    border-bottom: 0px solid lighten($brand-secondary, 30%);
+  .archive__border--bottom{
+    border-bottom: 1px solid lighten($brand-secondary, 30%);
   }
 
 
 @media screen and (min-width: $screen-sm) {
 
-  .archive:last-child{
+  .archive__border--bottom{
+    border-bottom: 0px solid lighten($brand-secondary, 30%);
+  }
+
+  .archive__border--end{
     border-bottom: 1px solid lighten($brand-secondary, 30%);
   }
 
@@ -64,6 +67,15 @@
       width: 18px;
       height: 22px;
       background: url('../img/download.svg') no-repeat;
+      margin-top: -5px;
+      margin-left: 1em;
+      padding-right: 0.5em;
+    }
+
+    .archive__icon--go {
+      width: 18px;
+      height: 22px;
+      background: url('../img/go.svg') no-repeat;
       margin-top: -5px;
       margin-left: 1em;
       padding-right: 0.5em;
