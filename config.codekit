@@ -584,6 +584,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/contact\/original\/DSC00464.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6.36411e+06,
+		"inputAbbreviatedPath": "\/img\/contact\/original\/DSC00464.jpg",
+		"outputAbbreviatedPath": "\/img\/contact\/original\/DSC00464.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/contact\/original\/Erik Tesch.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -877,6 +888,28 @@
 		"initialSize": 18592,
 		"inputAbbreviatedPath": "\/img\/contact\/samfirth@2x.jpg",
 		"outputAbbreviatedPath": "\/img\/contact\/samfirth@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/contact\/simongadelii.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7863,
+		"inputAbbreviatedPath": "\/img\/contact\/simongadelii.jpg",
+		"outputAbbreviatedPath": "\/img\/contact\/simongadelii.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/contact\/simongadelii@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21195,
+		"inputAbbreviatedPath": "\/img\/contact\/simongadelii@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/contact\/simongadelii@2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

@@ -76,3 +76,36 @@
 .clearfix:after {
     clear: both;
 }
+
+
+
+/*
+ * Hide Mobile version
+ */
+.mobile_version {
+  display: none;
+}
+
+.mobile_menu {
+  display: block;
+}
+
+.desktop_menu {
+  display: none;
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .mobile_menu {
+  display: none;
+}
+
+.desktop_menu {
+  display: block;
+}
+
+  .mobile_version {
+    display: block;
+  }
+
+}

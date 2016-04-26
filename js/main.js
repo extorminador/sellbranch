@@ -2,8 +2,12 @@
 function menu()
     {
     var navigation = document.getElementsByClassName('navigation');
+    var navigationDesktop = document.getElementsByClassName('navigation-desktop');
+
     var nav = document.getElementById('js-navigation');
     var logo = document.getElementById('js-logo');
+    var logoDesktop = document.getElementById('js-logo-desktop');
+
     var header = document.getElementById('js-header');
 
     var mq = window.matchMedia( "(max-width: 767px)" );
@@ -16,6 +20,7 @@ function menu()
 
         // Logotype
         logo.setAttribute("src", "img/Sellbranch-logo.svg");
+        logoDesktop.setAttribute("src", "img/Sellbranch-logo.svg");
 
 
         if (mq.matches) {
@@ -25,6 +30,9 @@ function menu()
           navigation[0].style.boxShadow = "0px 3px 3px 0px rgba(0, 0, 0, 0.3)";
           navigation[0].style.backgroundColor = "#fcfcfc";
 
+          navigationDesktop[0].style.boxShadow = "0px 3px 3px 0px rgba(0, 0, 0, 0.3)";
+          navigationDesktop[0].style.backgroundColor = "#fcfcfc";
+
           // Header
           header.style.padding = "10px 0";
         } else {
@@ -33,6 +41,9 @@ function menu()
           // Navigation
           navigation[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.2)";
           navigation[0].style.backgroundColor = "#fcfcfc";
+
+          navigationDesktop[0].style.boxShadow = "0px 2px 1px 0px rgba(0, 0, 0, 0.2)";
+          navigationDesktop[0].style.backgroundColor = "#fcfcfc";
 
           // Header
           header.style.padding = "15px 0";
@@ -52,8 +63,12 @@ function menu()
         navigation[0].style.backgroundColor = "transparent";
         navigation[0].style.boxShadow = "none";
 
+        navigationDesktop[0].style.backgroundColor = "transparent";
+        navigationDesktop[0].style.boxShadow = "none";
+
         // Logo
         logo.setAttribute("src", "img/SellbranchWhite.svg");
+        logoDesktop.setAttribute("src", "img/SellbranchWhite.svg");
 
         // Header
         if (mq.matches) {
@@ -131,20 +146,24 @@ $(function(){
         }
             $('.current').removeClass('current');
             $('#main_nav a[href=#'+wayID+']').addClass('current');
+            $('#main_nav_desktop a[href=#'+wayID+']').addClass('current');
         }, { offset: '40%' });
 
 
 
        /// StickNav
        var stickyNavTop = $('.nav').offset().top;
+       var stickyNavTop = $('.nav_desktop').offset().top;
 
         var stickyNav = function(){
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop > stickyNavTop) {
             $('.nav').addClass('isStuck');
+            $('.nav_desktop').addClass('isStuck');
         } else {
             $('.nav').removeClass('isStuck');
+            $('.nav_desktop').removeClass('isStuck');
         }
     };
     stickyNav();

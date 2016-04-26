@@ -24,8 +24,10 @@
 
       <!-- Cover & Header -->
       <section class="fade-in one cover" id="home">
-        <section class="navigation" id="js-navigation">
-          <header id="js-header">
+
+        <!-- Header Mobile -->
+        <section class="navigation  mobile_menu" id="">
+          <header id="js-header" class="">
             <div class="header__container">
 
               <!-- Logo -->
@@ -35,19 +37,48 @@
                 </a>
               </div>
 
-              <!-- Menu -->
+              <!-- Menu Mobile -->
               <div class="header__nav__container">
                 <nav class="nav" id="js-nav">
                   <ul id="main_nav">
-                    <li ><a href="#about" class="smoothScroll js-link">About</a></li>
+                    <li><a href="#about" class="smoothScroll js-link">About</a></li>
                     <li><a href="#programmatic" class="smoothScroll js-link">Programmatic</a></li>
-                    <li><a href="#direct_sales" class="smoothScroll js-link">Direct Sales</a></li>
-                    <li><a href="#press" class="smoothScroll js-link">Press</a></li>
-                    <li><a href="#job" class="smoothScroll js-link">Job</a></li>
                     <li><a href="#contact" class="smoothScroll js-link">Contact</a></li>
+                    <li><a href="#find" class="smoothScroll js-link">Find us</a></li>
                   </ul>
                 </nav>
+              </div> <!-- end Menu -->
               </div>
+            </div>
+          </header>
+        </section> <!-- end Navigation -->
+
+        <!-- Header Desktop -->
+        <section class="navigation navigation-desktop desktop_menu" id="">
+          <header id="" class="">
+            <div class="header__container">
+
+              <!-- Logo -->
+              <div class="logo__container">
+                <a href="#home" class="smoothScroll logo">
+                  <img id="js-logo-desktop" src="img/SellbranchWhite.svg">
+                </a>
+              </div>
+
+              <!-- Menu -->
+              <div class="header__nav__container">
+                <nav class="nav nav_desktop  desktop_menu" id="js-nav">
+                  <ul id="main_nav_desktop">
+                    <li><a href="#about" class="smoothScroll js-link">About</a></li>
+                    <li><a href="#programmatic" class="smoothScroll js-link">Programmatic</a></li>
+                    <li><a href="#direct_sales" class="smoothScroll js-link mobile_version">Direct Sales</a></li>
+                    <li><a href="#press" class="smoothScroll js-link mobile_version">Press</a></li>
+                    <li><a href="#job" class="smoothScroll js-link mobile_version">Job</a></li>
+                    <li><a href="#contact" class="smoothScroll js-link">Contact</a></li>
+                    <li><a href="#find" class="smoothScroll js-link">Find us</a></li>
+                  </ul>
+                </nav>
+              </div> <!-- end Menu -->
               </div>
             </div>
           </header>
@@ -84,7 +115,7 @@
         </div> <!-- end row About -->
 
         <!-- Timeline -->
-        <section class="timeline__section">
+        <section class="timeline__section mobile_version">
           <div class="row  row_brand  row__timeline">
 
             <!-- 2009 -->
@@ -125,7 +156,7 @@
         </section> <!-- end Timeline -->
 
         <!-- CEO and Founder Fredrik -->
-        <section class="ceo__section">
+        <section class="ceo__section mobile_version">
         <div class="round__image--margin round__image--border-light-brand-primary">
           <img src="img/fredriksellgren.jpg" alt="Fredrik Sellgren" width="144" height="144">
         </div>
@@ -143,7 +174,7 @@
         </section> <!-- end CEO and Founder Fredrik -->
 
         <!-- Founder Ola -->
-        <section class="founder__section">
+        <section class="founder__section mobile_version">
         <div class="round__image--border-brand-dark">
           <img src="img/Ola-Ahlvarsson.jpg" alt="Ola Ahlvarsson" width="144" height="144">
         </div>
@@ -211,7 +242,7 @@
 
 
       <!-- Direct Sales -->
-      <section class="post_article section_brand section_lighten_brand-secondary" id="direct_sales" >
+      <section class="post_article section_brand section_lighten_brand-secondary mobile_version" id="direct_sales" >
         <div class="row row_brand directSales__row">
           <div class="col-xs-12">
             <h2 class="text-dark text-center animatedFadeInUp">Direct Sales</h2>
@@ -251,7 +282,7 @@
 
 
       <!-- Press -->
-      <section class="post_article section_brand press__section" id="press">
+      <section class="post_article section_brand press__section mobile_version" id="press">
         <div class="row row_brand">
           <div class="col-xs-12">
             <h2 class="text-center">Press</h2>
@@ -264,6 +295,18 @@
           <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
             <!-- Link 1 -->
             <div class="archive archive__border--top flat-box animatedFadeInUp">
+              <p class="archive__date">14 April 2016</p>
+              <div class="archive__content">
+                <a class="archive__file--download" href="img/pdf/PR_Dailymail.pdf" target="_blank">Daily Mail i partnerskap med Sellbranch i Norden
+                </a>
+                <a class="archive__icon--go" href="img/PR_Dailymail.pdf" target="_blank"></a>
+              </div>
+            </div>
+            </div> <!-- end Col 1 -->
+
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <!-- Link 1 -->
+            <div class="archive archive__border--top flat-box animatedFadeInUp">
               <p class="archive__date">08 April 2016</p>
               <div class="archive__content">
                 <a class="archive__file--download" href="http://www.dagensmedia.se/medier/digitalt/har-ar-twitters-planer-for-sveriges-mediehus-6539767" target="_blank">Här är Twitters planer för Sveriges mediehus.
@@ -272,10 +315,13 @@
               </div>
             </div>
             </div> <!-- end Col 2 -->
+          </div> <!-- end row 1 -->
 
-            <div class="col-xs-12 col-sm-6 col-md-5">
+        <!-- Row 2 -->
+        <div class="row row_brand">
+            <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
             <!-- Link 2 -->
-            <div class="archive archive__border--top archive__border--end flat-box animatedFadeInUp">
+            <div class="archive archive__border--top flat-box animatedFadeInUp">
               <p class="archive__date">23 March 2016</p>
               <div class="archive__content">
                 <a class="archive__file--download" href="http://www.dagensmedia.se/experter/debatt/fredrik-sellgren-darfor-ar-twitter-viktigt-6535829" target="_blank">Fredrik Sellgren: "Därför är Twitter viktigt"
@@ -284,11 +330,35 @@
               </div>
             </div>
           </div> <!-- end Col 2 -->
-          </div> <!-- end row 1 -->
 
-        <!-- Row 1 -->
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <!-- Link 1 -->
+            <div class="archive archive__border--top flat-box animatedFadeInUp">
+              <p class="archive__date">03 March 2015</p>
+              <div class="archive__content">
+                <a class="archive__file--download" href="img/pdf/PR_Doodle_nordics_MB_2.docx" target="_blank">Online scheduling platform Doodle expands to Nordics through partnership with Sellbranch
+                </a>
+                <a class="archive__icon--go" href="img/pdf/PR_Doodle_nordics_MB_2.docx" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end row 2 -->
+
+        <!-- Row 3 -->
         <div class="row row_brand">
-        <div class="col-xs-12 col-sm-6  col-md-offset-1 col-md-5">
+            <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
+            <!-- Link 2 -->
+            <div class="archive archive__border--top archive__border--end flat-box animatedFadeInUp">
+              <p class="archive__date">23 Octuber 2014</p>
+              <div class="archive__content">
+                <a class="archive__file--download" href="img/pdf/Twitter and SellBranch press release.pdf" target="_blank">SellBranch partners with Twitter to bring Twitter Ads to Nordic countries"
+                </a>
+                <a class="archive__icon--go" href="img/pdf/Twitter and SellBranch press release.pdf" target="_blank"></a>
+              </div>
+            </div>
+          </div> <!-- end Col 2 -->
+
+          <div class="col-xs-12 col-sm-6 col-md-5">
             <!-- Link 1 -->
             <div class="archive archive__border--top archive__border--bottom archive__border--end flat-box animatedFadeInUp">
               <p class="archive__date">29 April 2014</p>
@@ -298,20 +368,20 @@
                 <a class="archive__icon--go" href="http://www.dagensmedia.se/medier/digitalt/sellbranch-saljs-till-schweiz-6101877" target="_blank"></a>
               </div>
             </div>
-            </div>
-          </div> <!-- end row 2 -->
+          </div>
+        </div> <!-- end row 3 -->
 
 
       </section>
 
 
       <!-- Job -->
-      <section class="post_article section_brand job__section" id="job">
+      <section class="post_article section_brand job__section mobile_version" id="job">
         <div class="row row_brand">
           <article class="col-xs-12 center-xs col-sm-6 start-sm  col-md-offset-1 col-md-5">
             <img class="job__earth" src="img/icon-space.svg" alt="">
             <h3 class="text-secondary animatedFadeInUp">Career opportunities</h3>
-            <p class="job__text--carrier animatedFadeInUp">Do you want to be part of a workplace that allows you to develop on a personal level as well as in your professional role? See vacancies we have for you.</p>
+            <p class="job__text--carrier animatedFadeInUp">We are always looking for fantastic people to join our team! We might not have any opportunities for you right now but please feel free to sund us your resume.</p>
           </article>
 
           <article class="col-xs-12 col-sm-6 first-xs last-sm">
@@ -319,44 +389,44 @@
 <!--             <p class="job__text--presentation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ducimus odio odit vitae repellat, maiores vero! Earum, ratione corporis quas accusamus voluptates dolores iusto ipsam nam aut eveniet amet sequi.</p> -->
 
             <!-- Job 1 -->
-            <div class="archive archive__border--top flat-box animatedFadeInUp">
-              <p class="archive__date">04 Nov 2014</p>
+            <div class="archive archive__border--top archive__border--bottom archive__border--end flat-box animatedFadeInUp">
+              <p class="archive__date">19 April 2016</p>
               <div class="archive__content">
-                <a class="archive__file--download">Internship: Admin / Account Manager for Twitter Nordics
+                <a class="archive__file--download">Account Manager Twitter Nordics
                 </a>
-                <a class="archive__icon--download href="" target="_blank""></a>
+                <a class="archive__icon--download" href="img/pdf/Account Manager Twitter Nordics.pdf" target="_blank"></a>
               </div>
             </div>
 
             <!-- Job 2 -->
-            <div class="archive archive__border--top flat-box animatedFadeInUp">
+<!--             <div class="archive archive__border--top flat-box animatedFadeInUp">
               <p class="archive__date">04 Nov 2014</p>
               <div class="archive__content">
                 <a class="archive__file--download">Internship: Admin / Account Manager for Twitter Nordics
                 </a>
                 <a class="archive__icon--download href="" target="_blank""></a>
               </div>
-            </div>
+            </div> -->
 
             <!-- Job 3 -->
-            <div class="archive archive__border--top flat-box animatedFadeInUp">
+<!--             <div class="archive archive__border--top flat-box animatedFadeInUp">
               <p class="archive__date">04 Nov 2014</p>
               <div class="archive__content">
                 <a class="archive__file--download">Internship: Admin / Account Manager for Twitter Nordics
                 </a>
                 <a class="archive__icon--download href="" target="_blank""></a>
               </div>
-            </div>
+            </div> -->
 
             <!-- Job 4 -->
-            <div class="archive archive__border--top archive__border--bottom archive__border--end flat-box animatedFadeInUp">
+<!--             <div class="archive archive__border--top archive__border--bottom archive__border--end flat-box animatedFadeInUp">
               <p class="archive__date">04 Nov 2014</p>
               <div class="archive__content">
                 <a class="archive__file--download">Internship: Admin / Account Manager for Twitter Nordics
                 </a>
                 <a class="archive__icon--download href="" target="_blank""></a>
               </div>
-            </div>
+            </div> -->
           </article>
         </div>
 
@@ -638,6 +708,17 @@
               <a class="card__mail animatedFadeInUp" href="mailto:erik.tesch@sellbranch.com">erik.tesch@sellbranch.com</a>
             </div> <!-- end Erik Tesch -->
 
+            <!-- Simon Gadelii -->
+            <div class="col-xs-12 col-sm-6 col-lg-3 card">
+              <div class="card card__round--image--border animatedFadeInUp">
+                <img src="img/contact/simongadelii.jpg" alt="Simon Gadelii" width="144" height="144">
+              </div>
+              <h3 class="text-center text-primary animatedFadeInUp">Simon Gadelii</h3>
+<!--               <h4 class="text-center card__person--title">Twitter Account Managers</h4>
+ -->              <a class="card__phone animatedFadeInUp" href="callto:+46739906944">+46 (0)73 990 69 44</a>
+              <a class="card__mail animatedFadeInUp" href="mailto:simon.gadelii@sellbranch.com">simon.gadelii@sellbranch.com</a>
+            </div> <!-- end Simon Gadelii -->
+
           </div> <!-- end Third row Direct Sales -->
 
 
@@ -707,7 +788,11 @@
 
           </div> <!-- End Sellbranch Finland -->
 
+      </section> <!-- end Contact -->
+
+
           <!-- Maps -->
+         <section class="post_article" id="find">
           <div class="row row_brand">
             <div class="col-xs-12">
               <h3 class="title__maps text-center">Find us om map:</h3>
@@ -733,10 +818,7 @@
               <p class="no-top">0158 Oslo</p>
             </div> <!-- end Norway -->
           </div> <!-- end Maps -->
-
-
-      </section> <!-- end Contact -->
-
+        </section> <!-- end Maps -->
 
       <!-- Button up -->
       <div>
@@ -827,12 +909,14 @@
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-        //     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        //     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        //     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        //     e.src='https://www.google-analytics.com/analytics.js';
-        //     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        //     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        // </script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-76959620-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </body>
 </html>
